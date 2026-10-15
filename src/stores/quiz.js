@@ -1,6 +1,6 @@
 import { reactive, ref } from 'vue'
 export const catalog = reactive({ quizzes: [], loading: false, error: '' })
-export const selectedId = ref('web')
+export const selectedId = ref('fussball')
 export const session = reactive({ result: null })
 export async function loadQuizzes() {
   catalog.loading = true

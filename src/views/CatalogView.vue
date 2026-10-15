@@ -4,7 +4,7 @@ import { catalog, selectedId, loadQuizzes } from '../stores/quiz'
 const selected = computed(() => catalog.quizzes.find(q => q.id === selectedId.value) || catalog.quizzes[0])
 </script>
 <template>
-  <header><p class="eyebrow">Wissen trainieren</p><h1>Deine nächste Quizrunde</h1><p>Wähle ein Thema und entdecke die Details. Pro Frage hast du 20 Sekunden.</p></header>
+  <header><p class="eyebrow">Wissen trainieren</p><h1>Dein Sportquiz</h1><p>Wähle ein Sportthema und entdecke die Details. Pro Frage hast du 20 Sekunden.</p></header>
   <p v-if="catalog.loading" role="status">Quizdaten werden geladen …</p>
   <section v-else-if="catalog.error" role="alert"><p>{{ catalog.error }}</p><button class="primary-button" @click="loadQuizzes">Erneut versuchen</button></section>
   <div v-else class="master-detail">

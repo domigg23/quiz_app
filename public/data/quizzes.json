@@ -1,138 +1,35 @@
 [
   {
-    "id": "web",
-    "title": "Web & JavaScript",
-    "category": "Web",
-    "description": "Teste dein Wissen über HTML, CSS und JavaScript.",
+    "id": "fussball", "title": "Fußball", "category": "Sport",
+    "description": "Teste dein Wissen über Fußballstars, Vereine und Weltmeisterschaften.",
     "questions": [
-      {
-        "id": 1,
-        "category": "Web",
-        "question": "Wofür steht HTML?",
-        "answers": [
-          "HighText Machine Language",
-          "Hyper Transfer Main Language",
-          "Home Tool Markup Language",
-          "HyperText Markup Language"
-        ],
-        "correctIndex": 3
-      },
-      {
-        "id": 3,
-        "category": "JavaScript",
-        "question": "Welches Schlüsselwort erzeugt in JavaScript eine Variable, deren Wert später geändert werden kann?",
-        "answers": [
-          "final",
-          "let",
-          "const",
-          "static"
-        ],
-        "correctIndex": 1
-      },
-      {
-        "id": 4,
-        "category": "CSS",
-        "question": "Welche CSS-Eigenschaft ändert die Textfarbe?",
-        "answers": [
-          "color",
-          "font-color",
-          "text-color",
-          "foreground"
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": 7,
-        "category": "JavaScript",
-        "question": "Welche Methode fügt ein Element am Ende eines Arrays hinzu?",
-        "answers": [
-          "slice()",
-          "push()",
-          "pop()",
-          "shift()"
-        ],
-        "correctIndex": 1
-      },
-      {
-        "id": 9,
-        "category": "Web",
-        "question": "Welcher HTTP-Statuscode bedeutet normalerweise „Nicht gefunden“?",
-        "answers": [
-          "200",
-          "301",
-          "500",
-          "404"
-        ],
-        "correctIndex": 3
-      }
+      {"id":1,"category":"Fußball","question":"Welches Land gewann die Fußball-WM der Männer 2014?","answers":["Brasilien","Deutschland","Argentinien","Spanien"],"correctIndex":1},
+      {"id":2,"category":"Fußball","question":"Aus welchem Land stammt Lionel Messi?","answers":["Portugal","Uruguay","Brasilien","Argentinien"],"correctIndex":3},
+      {"id":3,"category":"Fußball","question":"Mit welcher Sportart wurde Pelé weltberühmt?","answers":["Fußball","Basketball","Tennis","Handball"],"correctIndex":0},
+      {"id":4,"category":"Fußball","question":"In welcher Stadt ist der Verein FC Barcelona beheimatet?","answers":["Madrid","Sevilla","Barcelona","Valencia"],"correctIndex":2},
+      {"id":5,"category":"Fußball","question":"Welches Land gewann die Fußball-WM der Männer 2022?","answers":["Frankreich","Argentinien","Kroatien","Marokko"],"correctIndex":1}
     ]
   },
   {
-    "id": "vue",
-    "title": "Vue & Git",
-    "category": "Entwicklung",
-    "description": "Reaktivität, Vue-Grundlagen und Zusammenarbeit mit Git.",
-    "questions": [
-      {
-        "id": 2,
-        "category": "Vue",
-        "question": "Welcher Befehl startet bei einem Vite-Projekt normalerweise den Entwicklungsserver?",
-        "answers": [
-          "vite compile",
-          "npm run production",
-          "npm run dev",
-          "npm start vue"
-        ],
-        "correctIndex": 2
-      },
-      {
-        "id": 5,
-        "category": "Vue",
-        "question": "Welche Direktive wird in Vue verwendet, um Inhalte nur unter einer Bedingung anzuzeigen?",
-        "answers": [
-          "v-loop",
-          "v-show-only",
-          "v-condition",
-          "v-if"
-        ],
-        "correctIndex": 3
-      },
-      {
-        "id": 6,
-        "category": "Git",
-        "question": "Welcher Git-Befehl lädt lokale Commits zu einem Remote-Repository hoch?",
-        "answers": [
-          "git clone",
-          "git status",
-          "git push",
-          "git pull"
-        ],
-        "correctIndex": 2
-      },
-      {
-        "id": 8,
-        "category": "Vue",
-        "question": "Wie heißt die Funktion aus Vue, mit der ein reaktiver einzelner Wert erstellt werden kann?",
-        "answers": [
-          "ref()",
-          "watcher()",
-          "value()",
-          "state()"
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": 10,
-        "category": "Git",
-        "question": "Wofür wird ein Git-Branch hauptsächlich verwendet?",
-        "answers": [
-          "Um CSS automatisch zu generieren",
-          "Um Node.js zu installieren",
-          "Um Änderungen getrennt vom Hauptzweig zu entwickeln",
-          "Um den PC neu zu starten"
-        ],
-        "correctIndex": 2
-      }
+    "id":"sportmix", "title":"Sportmix", "category":"Sport",
+    "description":"Von Tennis bis Basketball: Erkennst du diese Sportarten und ihre Stars?",
+    "questions":[
+      {"id":6,"category":"Sportmix","question":"In welcher Sportart wurde Michael Jordan berühmt?","answers":["Baseball","Eishockey","Basketball","Tennis"],"correctIndex":2},
+      {"id":7,"category":"Sportmix","question":"Mit welcher Sportart verbindet man Roger Federer?","answers":["Tennis","Golf","Badminton","Squash"],"correctIndex":0},
+      {"id":8,"category":"Sportmix","question":"Welche Sportart wird bei der Tour de France ausgeübt?","answers":["Laufen","Schwimmen","Skifahren","Radsport"],"correctIndex":3},
+      {"id":9,"category":"Sportmix","question":"In welcher Sportart wurde Michael Phelps als Olympiasieger bekannt?","answers":["Rudern","Schwimmen","Turnen","Segeln"],"correctIndex":1},
+      {"id":10,"category":"Sportmix","question":"Welche Sportart verbindet man mit Muhammad Ali?","answers":["Fechten","Ringen","Boxen","Judo"],"correctIndex":2}
+    ]
+  },
+  {
+    "id":"olympia", "title":"Olympia & Wintersport", "category":"Sport",
+    "description":"Entdecke olympische Geschichte und bekannte Wintersportarten.",
+    "questions":[
+      {"id":11,"category":"Olympia","question":"In welcher Stadt fanden die ersten Olympischen Spiele der Neuzeit 1896 statt?","answers":["Athen","Rom","Paris","London"],"correctIndex":0},
+      {"id":12,"category":"Olympia","question":"Wie viele Ringe zeigt das olympische Symbol?","answers":["Vier","Sechs","Sieben","Fünf"],"correctIndex":3},
+      {"id":13,"category":"Leichtathletik","question":"Aus welchem Land stammt der Sprinter Usain Bolt?","answers":["USA","Jamaika","Kenia","Kanada"],"correctIndex":1},
+      {"id":14,"category":"Wintersport","question":"Welche zwei Sportarten werden beim Biathlon kombiniert?","answers":["Skispringen und Eislaufen","Rodeln und Schießen","Skilanglauf und Schießen","Abfahrt und Eishockey"],"correctIndex":2},
+      {"id":15,"category":"Wintersport","question":"In welcher Sportart wurde Marcel Hirscher bekannt?","answers":["Ski alpin","Eiskunstlauf","Skispringen","Snowboard"],"correctIndex":0}
     ]
   }
 ]

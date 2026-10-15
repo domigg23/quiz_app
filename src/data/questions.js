@@ -1,122 +1,183 @@
+// Kompatibler Fragenexport; die App lädt public/data/quizzes.json mit fetch.
 export const questions = [
   {
-    id: 1,
-    category: 'Web',
-    question: 'Wofür steht HTML?',
-    answers: [
-      'HyperText Markup Language',
-      'HighText Machine Language',
-      'Hyper Transfer Main Language',
-      'Home Tool Markup Language'
+    "id": 1,
+    "category": "Fußball",
+    "question": "Welches Land gewann die Fußball-WM der Männer 2014?",
+    "answers": [
+      "Brasilien",
+      "Deutschland",
+      "Argentinien",
+      "Spanien"
     ],
-    correctIndex: 0
+    "correctIndex": 1
   },
   {
-    id: 2,
-    category: 'Vue',
-    question: 'Welcher Befehl startet bei einem Vite-Projekt normalerweise den Entwicklungsserver?',
-    answers: [
-      'npm run dev',
-      'npm start vue',
-      'vite compile',
-      'npm run production'
+    "id": 2,
+    "category": "Fußball",
+    "question": "Aus welchem Land stammt Lionel Messi?",
+    "answers": [
+      "Portugal",
+      "Uruguay",
+      "Brasilien",
+      "Argentinien"
     ],
-    correctIndex: 0
+    "correctIndex": 3
   },
   {
-    id: 3,
-    category: 'JavaScript',
-    question: 'Welches Schlüsselwort erzeugt in JavaScript eine Variable, deren Wert später geändert werden kann?',
-    answers: [
-      'let',
-      'const',
-      'static',
-      'final'
+    "id": 3,
+    "category": "Fußball",
+    "question": "Mit welcher Sportart wurde Pelé weltberühmt?",
+    "answers": [
+      "Fußball",
+      "Basketball",
+      "Tennis",
+      "Handball"
     ],
-    correctIndex: 0
+    "correctIndex": 0
   },
   {
-    id: 4,
-    category: 'CSS',
-    question: 'Welche CSS-Eigenschaft ändert die Textfarbe?',
-    answers: [
-      'color',
-      'font-color',
-      'text-color',
-      'foreground'
+    "id": 4,
+    "category": "Fußball",
+    "question": "In welcher Stadt ist der Verein FC Barcelona beheimatet?",
+    "answers": [
+      "Madrid",
+      "Sevilla",
+      "Barcelona",
+      "Valencia"
     ],
-    correctIndex: 0
+    "correctIndex": 2
   },
   {
-    id: 5,
-    category: 'Vue',
-    question: 'Welche Direktive wird in Vue verwendet, um Inhalte nur unter einer Bedingung anzuzeigen?',
-    answers: [
-      'v-if',
-      'v-loop',
-      'v-show-only',
-      'v-condition'
+    "id": 5,
+    "category": "Fußball",
+    "question": "Welches Land gewann die Fußball-WM der Männer 2022?",
+    "answers": [
+      "Frankreich",
+      "Argentinien",
+      "Kroatien",
+      "Marokko"
     ],
-    correctIndex: 0
+    "correctIndex": 1
   },
   {
-    id: 6,
-    category: 'Git',
-    question: 'Welcher Git-Befehl lädt lokale Commits zu einem Remote-Repository hoch?',
-    answers: [
-      'git push',
-      'git pull',
-      'git clone',
-      'git status'
+    "id": 6,
+    "category": "Sportmix",
+    "question": "In welcher Sportart wurde Michael Jordan berühmt?",
+    "answers": [
+      "Baseball",
+      "Eishockey",
+      "Basketball",
+      "Tennis"
     ],
-    correctIndex: 0
+    "correctIndex": 2
   },
   {
-    id: 7,
-    category: 'JavaScript',
-    question: 'Welche Methode fügt ein Element am Ende eines Arrays hinzu?',
-    answers: [
-      'push()',
-      'pop()',
-      'shift()',
-      'slice()'
+    "id": 7,
+    "category": "Sportmix",
+    "question": "Mit welcher Sportart verbindet man Roger Federer?",
+    "answers": [
+      "Tennis",
+      "Golf",
+      "Badminton",
+      "Squash"
     ],
-    correctIndex: 0
+    "correctIndex": 0
   },
   {
-    id: 8,
-    category: 'Vue',
-    question: 'Wie heißt die Funktion aus Vue, mit der ein reaktiver einzelner Wert erstellt werden kann?',
-    answers: [
-      'ref()',
-      'watcher()',
-      'value()',
-      'state()'
+    "id": 8,
+    "category": "Sportmix",
+    "question": "Welche Sportart wird bei der Tour de France ausgeübt?",
+    "answers": [
+      "Laufen",
+      "Schwimmen",
+      "Skifahren",
+      "Radsport"
     ],
-    correctIndex: 0
+    "correctIndex": 3
   },
   {
-    id: 9,
-    category: 'Web',
-    question: 'Welcher HTTP-Statuscode bedeutet normalerweise „Nicht gefunden“?',
-    answers: [
-      '404',
-      '200',
-      '301',
-      '500'
+    "id": 9,
+    "category": "Sportmix",
+    "question": "In welcher Sportart wurde Michael Phelps als Olympiasieger bekannt?",
+    "answers": [
+      "Rudern",
+      "Schwimmen",
+      "Turnen",
+      "Segeln"
     ],
-    correctIndex: 0
+    "correctIndex": 1
   },
   {
-    id: 10,
-    category: 'Git',
-    question: 'Wofür wird ein Git-Branch hauptsächlich verwendet?',
-    answers: [
-      'Um Änderungen getrennt vom Hauptzweig zu entwickeln',
-      'Um den PC neu zu starten',
-      'Um CSS automatisch zu generieren',
-      'Um Node.js zu installieren'
+    "id": 10,
+    "category": "Sportmix",
+    "question": "Welche Sportart verbindet man mit Muhammad Ali?",
+    "answers": [
+      "Fechten",
+      "Ringen",
+      "Boxen",
+      "Judo"
     ],
-    correctIndex: 0
+    "correctIndex": 2
+  },
+  {
+    "id": 11,
+    "category": "Olympia",
+    "question": "In welcher Stadt fanden die ersten Olympischen Spiele der Neuzeit 1896 statt?",
+    "answers": [
+      "Athen",
+      "Rom",
+      "Paris",
+      "London"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "category": "Olympia",
+    "question": "Wie viele Ringe zeigt das olympische Symbol?",
+    "answers": [
+      "Vier",
+      "Sechs",
+      "Sieben",
+      "Fünf"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": 13,
+    "category": "Leichtathletik",
+    "question": "Aus welchem Land stammt der Sprinter Usain Bolt?",
+    "answers": [
+      "USA",
+      "Jamaika",
+      "Kenia",
+      "Kanada"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 14,
+    "category": "Wintersport",
+    "question": "Welche zwei Sportarten werden beim Biathlon kombiniert?",
+    "answers": [
+      "Skispringen und Eislaufen",
+      "Rodeln und Schießen",
+      "Skilanglauf und Schießen",
+      "Abfahrt und Eishockey"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 15,
+    "category": "Wintersport",
+    "question": "In welcher Sportart wurde Marcel Hirscher bekannt?",
+    "answers": [
+      "Ski alpin",
+      "Eiskunstlauf",
+      "Skispringen",
+      "Snowboard"
+    ],
+    "correctIndex": 0
   }
 ]
