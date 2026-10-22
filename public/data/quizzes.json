@@ -1,35 +1,274 @@
 [
   {
-    "id": "fussball", "title": "Fußball", "category": "Sport",
+    "id": "fussball",
+    "title": "Fußball",
+    "category": "Sport",
     "description": "Teste dein Wissen über Fußballstars, Vereine und Weltmeisterschaften.",
     "questions": [
-      {"id":1,"category":"Fußball","question":"Welches Land gewann die Fußball-WM der Männer 2014?","answers":["Brasilien","Deutschland","Argentinien","Spanien"],"correctIndex":1},
-      {"id":2,"category":"Fußball","question":"Aus welchem Land stammt Lionel Messi?","answers":["Portugal","Uruguay","Brasilien","Argentinien"],"correctIndex":3},
-      {"id":3,"category":"Fußball","question":"Mit welcher Sportart wurde Pelé weltberühmt?","answers":["Fußball","Basketball","Tennis","Handball"],"correctIndex":0},
-      {"id":4,"category":"Fußball","question":"In welcher Stadt ist der Verein FC Barcelona beheimatet?","answers":["Madrid","Sevilla","Barcelona","Valencia"],"correctIndex":2},
-      {"id":5,"category":"Fußball","question":"Welches Land gewann die Fußball-WM der Männer 2022?","answers":["Frankreich","Argentinien","Kroatien","Marokko"],"correctIndex":1}
+      {
+        "id": 1,
+        "category": "Fußball",
+        "question": "Welches Land gewann die Fußball-WM der Männer 2014?",
+        "answers": [
+          "Brasilien",
+          "Deutschland",
+          "Argentinien",
+          "Spanien"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 2,
+        "category": "Fußball",
+        "question": "Aus welchem Land stammt Lionel Messi?",
+        "answers": [
+          "Portugal",
+          "Uruguay",
+          "Brasilien",
+          "Argentinien"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 3,
+        "category": "Fußball",
+        "question": "Mit welcher Sportart wurde Pelé weltberühmt?",
+        "answers": [
+          "Fußball",
+          "Basketball",
+          "Tennis",
+          "Handball"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 4,
+        "category": "Fußball",
+        "question": "In welcher Stadt ist der Verein FC Barcelona beheimatet?",
+        "answers": [
+          "Madrid",
+          "Sevilla",
+          "Barcelona",
+          "Valencia"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 5,
+        "category": "Fußball",
+        "question": "Welches Land gewann die Fußball-WM der Männer 2022?",
+        "answers": [
+          "Frankreich",
+          "Argentinien",
+          "Kroatien",
+          "Marokko"
+        ],
+        "correctIndex": 1
+      }
     ]
   },
   {
-    "id":"sportmix", "title":"Sportmix", "category":"Sport",
-    "description":"Von Tennis bis Basketball: Erkennst du diese Sportarten und ihre Stars?",
-    "questions":[
-      {"id":6,"category":"Sportmix","question":"In welcher Sportart wurde Michael Jordan berühmt?","answers":["Baseball","Eishockey","Basketball","Tennis"],"correctIndex":2},
-      {"id":7,"category":"Sportmix","question":"Mit welcher Sportart verbindet man Roger Federer?","answers":["Tennis","Golf","Badminton","Squash"],"correctIndex":0},
-      {"id":8,"category":"Sportmix","question":"Welche Sportart wird bei der Tour de France ausgeübt?","answers":["Laufen","Schwimmen","Skifahren","Radsport"],"correctIndex":3},
-      {"id":9,"category":"Sportmix","question":"In welcher Sportart wurde Michael Phelps als Olympiasieger bekannt?","answers":["Rudern","Schwimmen","Turnen","Segeln"],"correctIndex":1},
-      {"id":10,"category":"Sportmix","question":"Welche Sportart verbindet man mit Muhammad Ali?","answers":["Fechten","Ringen","Boxen","Judo"],"correctIndex":2}
+    "id": "sportmix",
+    "title": "Sportmix",
+    "category": "Sport",
+    "description": "Von Tennis bis Basketball: Erkennst du diese Sportarten und ihre Stars?",
+    "questions": [
+      {
+        "id": 6,
+        "category": "Sportmix",
+        "question": "In welcher Sportart wurde Michael Jordan berühmt?",
+        "answers": [
+          "Baseball",
+          "Eishockey",
+          "Basketball",
+          "Tennis"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 7,
+        "category": "Sportmix",
+        "question": "Mit welcher Sportart verbindet man Roger Federer?",
+        "answers": [
+          "Tennis",
+          "Golf",
+          "Badminton",
+          "Squash"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 8,
+        "category": "Sportmix",
+        "question": "Welche Sportart wird bei der Tour de France ausgeübt?",
+        "answers": [
+          "Laufen",
+          "Schwimmen",
+          "Skifahren",
+          "Radsport"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 9,
+        "category": "Sportmix",
+        "question": "In welcher Sportart wurde Michael Phelps als Olympiasieger bekannt?",
+        "answers": [
+          "Rudern",
+          "Schwimmen",
+          "Turnen",
+          "Segeln"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 10,
+        "category": "Sportmix",
+        "question": "Welche Sportart verbindet man mit Muhammad Ali?",
+        "answers": [
+          "Fechten",
+          "Ringen",
+          "Boxen",
+          "Judo"
+        ],
+        "correctIndex": 2
+      }
     ]
   },
   {
-    "id":"olympia", "title":"Olympia & Wintersport", "category":"Sport",
-    "description":"Entdecke olympische Geschichte und bekannte Wintersportarten.",
-    "questions":[
-      {"id":11,"category":"Olympia","question":"In welcher Stadt fanden die ersten Olympischen Spiele der Neuzeit 1896 statt?","answers":["Athen","Rom","Paris","London"],"correctIndex":0},
-      {"id":12,"category":"Olympia","question":"Wie viele Ringe zeigt das olympische Symbol?","answers":["Vier","Sechs","Sieben","Fünf"],"correctIndex":3},
-      {"id":13,"category":"Leichtathletik","question":"Aus welchem Land stammt der Sprinter Usain Bolt?","answers":["USA","Jamaika","Kenia","Kanada"],"correctIndex":1},
-      {"id":14,"category":"Wintersport","question":"Welche zwei Sportarten werden beim Biathlon kombiniert?","answers":["Skispringen und Eislaufen","Rodeln und Schießen","Skilanglauf und Schießen","Abfahrt und Eishockey"],"correctIndex":2},
-      {"id":15,"category":"Wintersport","question":"In welcher Sportart wurde Marcel Hirscher bekannt?","answers":["Ski alpin","Eiskunstlauf","Skispringen","Snowboard"],"correctIndex":0}
+    "id": "olympia",
+    "title": "Olympia & Wintersport",
+    "category": "Sport",
+    "description": "Entdecke olympische Geschichte und bekannte Wintersportarten.",
+    "questions": [
+      {
+        "id": 11,
+        "category": "Olympia",
+        "question": "In welcher Stadt fanden die ersten Olympischen Spiele der Neuzeit 1896 statt?",
+        "answers": [
+          "Athen",
+          "Rom",
+          "Paris",
+          "London"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 12,
+        "category": "Olympia",
+        "question": "Wie viele Ringe zeigt das olympische Symbol?",
+        "answers": [
+          "Vier",
+          "Sechs",
+          "Sieben",
+          "Fünf"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 13,
+        "category": "Leichtathletik",
+        "question": "Aus welchem Land stammt der Sprinter Usain Bolt?",
+        "answers": [
+          "USA",
+          "Jamaika",
+          "Kenia",
+          "Kanada"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 14,
+        "category": "Wintersport",
+        "question": "Welche zwei Sportarten werden beim Biathlon kombiniert?",
+        "answers": [
+          "Skispringen und Eislaufen",
+          "Rodeln und Schießen",
+          "Skilanglauf und Schießen",
+          "Abfahrt und Eishockey"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 15,
+        "category": "Wintersport",
+        "question": "In welcher Sportart wurde Marcel Hirscher bekannt?",
+        "answers": [
+          "Ski alpin",
+          "Eiskunstlauf",
+          "Skispringen",
+          "Snowboard"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "mathematik",
+    "title": "Mathematik im Alltag",
+    "category": "Wissen",
+    "description": "Prozente, Formen und Einheiten: Fünf kleine Denkaufgaben mit hilfreichen Hinweisen.",
+    "questions": [
+      {
+        "id": 16,
+        "category": "Prozentrechnung",
+        "question": "Ein Trikot kostet 80 Euro. Du erhältst 25 % Rabatt, also ein Viertel des Preises. Wie viel bezahlst du?",
+        "answers": [
+          "20 Euro",
+          "55 Euro",
+          "60 Euro",
+          "75 Euro"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 17,
+        "category": "Geometrie",
+        "question": "Ein Rechteck ist 5 Meter lang und 3 Meter breit. Die Fläche berechnest du mit Länge mal Breite. Wie groß ist sie?",
+        "answers": [
+          "15 Quadratmeter",
+          "8 Quadratmeter",
+          "16 Quadratmeter",
+          "30 Quadratmeter"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 18,
+        "category": "Einheiten",
+        "question": "Ein Kilometer entspricht 1.000 Metern. Wie viele Meter sind 2,5 Kilometer?",
+        "answers": [
+          "250 Meter",
+          "25 Meter",
+          "25.000 Meter",
+          "2.500 Meter"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 19,
+        "category": "Durchschnitt",
+        "question": "Du erzielst in drei Runden 4, 6 und 8 Punkte. Für den Durchschnitt teilst du die Summe durch drei. Was ist das Ergebnis?",
+        "answers": [
+          "5 Punkte",
+          "6 Punkte",
+          "7 Punkte",
+          "18 Punkte"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 20,
+        "category": "Brüche",
+        "question": "Eine Pizza wird in acht gleich große Stücke geteilt. Du isst zwei davon. Welcher gekürzte Bruch beschreibt deinen Anteil?",
+        "answers": [
+          "Ein Halb",
+          "Drei Viertel",
+          "Ein Viertel",
+          "Ein Achtel"
+        ],
+        "correctIndex": 2
+      }
     ]
   }
 ]
