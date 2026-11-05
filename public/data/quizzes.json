@@ -66,7 +66,7 @@
         "correctIndex": 1
       },
       {
-        "id": 21.0,
+        "id": 21,
         "category": "Fußball",
         "question": "Wo fand die erste Fußball-WM der Männer 1930 statt?",
         "answers": [
@@ -78,7 +78,7 @@
         "correctIndex": 0
       },
       {
-        "id": 22.0,
+        "id": 22,
         "category": "Fußball",
         "question": "Welche Nationalmannschaft gewann die Fußball-EM der Männer 2004?",
         "answers": [
@@ -90,7 +90,7 @@
         "correctIndex": 1
       },
       {
-        "id": 23.0,
+        "id": 23,
         "category": "Fußball",
         "question": "Welches Land gewann die Fußball-WM der Männer 2010?",
         "answers": [
@@ -102,7 +102,7 @@
         "correctIndex": 2
       },
       {
-        "id": 24.0,
+        "id": 24,
         "category": "Fußball",
         "question": "In welcher Stadt fand das Finale der Fußball-WM der Männer 2006 statt?",
         "answers": [
@@ -114,7 +114,7 @@
         "correctIndex": 3
       },
       {
-        "id": 25.0,
+        "id": 25,
         "category": "Fußball",
         "question": "Welches Land gewann die Fußball-WM der Frauen 2023?",
         "answers": [
@@ -194,7 +194,7 @@
         "correctIndex": 2
       },
       {
-        "id": 26.0,
+        "id": 26,
         "category": "Tennis",
         "question": "In welcher Stadt wird das Tennisturnier Wimbledon ausgetragen?",
         "answers": [
@@ -206,7 +206,7 @@
         "correctIndex": 1
       },
       {
-        "id": 27.0,
+        "id": 27,
         "category": "Basketball",
         "question": "Für welches NBA-Team gewann Michael Jordan sechs Meisterschaften?",
         "answers": [
@@ -218,7 +218,7 @@
         "correctIndex": 2
       },
       {
-        "id": 28.0,
+        "id": 28,
         "category": "Leichtathletik",
         "question": "Bei welcher Laufdisziplin wird ein Staffelstab weitergegeben?",
         "answers": [
@@ -230,7 +230,7 @@
         "correctIndex": 3
       },
       {
-        "id": 29.0,
+        "id": 29,
         "category": "Radsport",
         "question": "In welcher Farbe fährt der Gesamtführende bei der Tour de France traditionell?",
         "answers": [
@@ -242,7 +242,7 @@
         "correctIndex": 0
       },
       {
-        "id": 30.0,
+        "id": 30,
         "category": "Eishockey",
         "question": "Womit wird beim Eishockey gespielt?",
         "answers": [
@@ -322,7 +322,7 @@
         "correctIndex": 0
       },
       {
-        "id": 31.0,
+        "id": 31,
         "category": "Olympia",
         "question": "Wo fanden die Olympischen Sommerspiele 2000 statt?",
         "answers": [
@@ -334,7 +334,7 @@
         "correctIndex": 2
       },
       {
-        "id": 32.0,
+        "id": 32,
         "category": "Wintersport",
         "question": "In welcher österreichischen Stadt fanden die Olympischen Winterspiele 1964 und 1976 statt?",
         "answers": [
@@ -346,7 +346,7 @@
         "correctIndex": 3
       },
       {
-        "id": 33.0,
+        "id": 33,
         "category": "Wintersport",
         "question": "Bei welcher Sportart schieben Teams Steine über das Eis und benutzen Besen?",
         "answers": [
@@ -358,7 +358,7 @@
         "correctIndex": 0
       },
       {
-        "id": 34.0,
+        "id": 34,
         "category": "Olympia",
         "question": "Welche Stadt war Gastgeberin der Olympischen Sommerspiele 2012?",
         "answers": [
@@ -370,7 +370,7 @@
         "correctIndex": 1
       },
       {
-        "id": 35.0,
+        "id": 35,
         "category": "Wintersport",
         "question": "Bei welcher Disziplin springen Athleten mit Skiern von einer Schanze möglichst weit?",
         "answers": [
@@ -387,7 +387,7 @@
     "id": "mathematik",
     "title": "Mathematik im Alltag",
     "category": "Wissen",
-    "description": "Prozente, Formen und Einheiten: Fünf kleine Denkaufgaben mit hilfreichen Hinweisen.",
+    "description": "Zehn Aufgaben zu Prozenten, Geometrie und Wahrscheinlichkeit – vom Einstieg bis zum kniffligen Alltagsproblem.",
     "questions": [
       {
         "id": 16,
@@ -446,6 +446,450 @@
           "Drei Viertel",
           "Ein Viertel",
           "Ein Achtel"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 36,
+        "category": "Prozentrechnung",
+        "question": "Ein Preis steigt zuerst um 20 % und sinkt danach um 20 %. Wie liegt er nun gegenüber dem ursprünglichen Preis?",
+        "answers": [
+          "4 % niedriger",
+          "Unverändert",
+          "4 % höher",
+          "8 % niedriger"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 37,
+        "category": "Geschwindigkeit",
+        "question": "Du fährst dieselbe Strecke hin mit 30 km/h und zurück mit 60 km/h. Wie hoch ist deine Durchschnittsgeschwindigkeit ohne Pausen?",
+        "answers": [
+          "45 km/h",
+          "50 km/h",
+          "40 km/h",
+          "35 km/h"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 38,
+        "category": "Wahrscheinlichkeit",
+        "question": "Ein fairer Würfel wird zweimal geworfen. Wie groß ist die Wahrscheinlichkeit, beide Male eine gerade Zahl zu würfeln?",
+        "answers": [
+          "1/2",
+          "1/3",
+          "1/6",
+          "1/4"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 39,
+        "category": "Maßstab",
+        "question": "Auf einem Plan im Maßstab 1:200 ist ein rechteckiger Raum 3 cm lang und 2 cm breit. Wie groß ist seine tatsächliche Fläche?",
+        "answers": [
+          "12 m²",
+          "24 m²",
+          "6 m²",
+          "48 m²"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 40,
+        "category": "Durchschnitt",
+        "question": "Vier Tests ergeben im Durchschnitt 14 Punkte. Wie viele Punkte brauchst du im fünften Test, damit der Gesamtdurchschnitt 15 beträgt?",
+        "answers": [
+          "16 Punkte",
+          "18 Punkte",
+          "19 Punkte",
+          "20 Punkte"
+        ],
+        "correctIndex": 2
+      }
+    ]
+  },
+  {
+    "id": "chemie",
+    "title": "Chemie – Grundlagen",
+    "category": "Naturwissenschaften",
+    "description": "Atome, Bindungen und Reaktionen: Zehn Fragen, die chemisches Verständnis statt bloßes Auswendiglernen testen.",
+    "questions": [
+      {
+        "id": 41,
+        "category": "Atombau",
+        "question": "Ein elektrisch neutrales Atom hat 17 Protonen und 18 Neutronen. Wie viele Elektronen besitzt es?",
+        "answers": [
+          "18",
+          "35",
+          "1",
+          "17"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 42,
+        "category": "Isotope",
+        "question": "Worin unterscheiden sich zwei Isotope desselben Elements?",
+        "answers": [
+          "In der Protonenzahl",
+          "In der Neutronenzahl",
+          "Immer in der Elektronenzahl",
+          "In der Ladung jedes Protons"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 43,
+        "category": "Ionen",
+        "question": "Ein neutrales Magnesiumatom gibt zwei Elektronen ab. Welche Ladung hat das entstehende Ion?",
+        "answers": [
+          "2−",
+          "1+",
+          "2+",
+          "0"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 44,
+        "category": "Chemische Bindung",
+        "question": "Was hält die Teilchen in einem Kochsalzkristall hauptsächlich zusammen?",
+        "answers": [
+          "Die Anziehung entgegengesetzt geladener Ionen",
+          "Gemeinsame Elektronenpaare zwischen NaCl-Molekülen",
+          "Wasserstoffbrücken zwischen Natrium und Chlor",
+          "Die Anziehung elektrisch neutraler Atome"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 45,
+        "category": "Reaktionsgleichungen",
+        "question": "Welche Koeffizienten gleichen die Gleichung H₂ + O₂ → H₂O aus?",
+        "answers": [
+          "1 : 1 : 1",
+          "2 : 2 : 1",
+          "1 : 2 : 2",
+          "2 : 1 : 2"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 46,
+        "category": "Lösungen",
+        "question": "10 g Kochsalz werden vollständig in 90 g Wasser gelöst. Welchen Massenanteil hat das Salz in der Lösung?",
+        "answers": [
+          "9 %",
+          "10 %",
+          "11,1 %",
+          "90 %"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 47,
+        "category": "Stofftrennung",
+        "question": "Wie lässt sich gelöstes Kochsalz aus Salzwasser als Feststoff zurückgewinnen?",
+        "answers": [
+          "Durch Filtrieren mit Filterpapier",
+          "Durch Absetzenlassen",
+          "Durch Verdampfen des Wassers",
+          "Durch Abgießen der oberen Flüssigkeit"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 48,
+        "category": "Katalyse",
+        "question": "Wie beschleunigt ein Katalysator eine chemische Reaktion?",
+        "answers": [
+          "Er ermöglicht einen Reaktionsweg mit geringerer Aktivierungsenergie",
+          "Er erhöht die Energie der Produkte dauerhaft",
+          "Er verschiebt das Gleichgewicht vollständig zu den Produkten",
+          "Er wird dabei dauerhaft als zusätzlicher Ausgangsstoff verbraucht"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 49,
+        "category": "Massenerhaltung",
+        "question": "In einem verschlossenen Gefäß reagieren Essig und Natron unter Gasbildung. Was passiert mit der Gesamtmasse des geschlossenen Gefäßes samt Inhalt?",
+        "answers": [
+          "Sie sinkt um die Masse des entstandenen Gases",
+          "Sie steigt, weil neue Teilchen entstehen",
+          "Sie sinkt, weil Energie frei wird",
+          "Sie bleibt bei einer gewöhnlichen chemischen Betrachtung gleich"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 50,
+        "category": "Redoxreaktionen",
+        "question": "Ein Eisenatom wird zu einem Fe²⁺-Ion. Was geschieht dabei?",
+        "answers": [
+          "Es nimmt zwei Elektronen auf und wird reduziert",
+          "Es gibt zwei Elektronen ab und wird oxidiert",
+          "Es nimmt zwei Protonen auf und wird oxidiert",
+          "Es gibt zwei Neutronen ab und wird reduziert"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "biologie",
+    "title": "Biologie – Grundlagen",
+    "category": "Naturwissenschaften",
+    "description": "Zellen, Vererbung und Ökosysteme: Zehn Fragen zu biologischen Zusammenhängen und typischen Denkfehlern.",
+    "questions": [
+      {
+        "id": 51,
+        "category": "Zellbiologie",
+        "question": "Welche Struktur kommt sowohl in Bakterienzellen als auch in menschlichen Körperzellen vor?",
+        "answers": [
+          "Ein Zellkern",
+          "Chloroplasten",
+          "Ribosomen",
+          "Mitochondrien"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 52,
+        "category": "Osmose",
+        "question": "Eine Pflanzenzelle liegt in einer stark konzentrierten Salzlösung. Was passiert zunächst mit ihrem Wasser?",
+        "answers": [
+          "Es strömt überwiegend aus der Zelle",
+          "Es strömt überwiegend in die Zelle",
+          "Es bleibt wegen der Zellwand vollständig in der Zelle",
+          "Es wird in der Zelle zu Salz umgewandelt"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 53,
+        "category": "Enzyme",
+        "question": "Warum sinkt die Aktivität vieler menschlicher Enzyme bei sehr hohen Temperaturen stark?",
+        "answers": [
+          "Die Moleküle bewegen sich dann langsamer",
+          "Das Substrat wird grundsätzlich nicht mehr gebildet",
+          "Die Enzyme werden vollständig verbraucht",
+          "Ihre räumliche Struktur und das aktive Zentrum verändern sich"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 54,
+        "category": "Zellatmung",
+        "question": "Welche Aussage über eine lebende grüne Pflanzenzelle trifft zu?",
+        "answers": [
+          "Sie betreibt Zellatmung nur nachts",
+          "Sie betreibt Zellatmung sowohl bei Licht als auch im Dunkeln",
+          "Sie betreibt Zellatmung nur während der Fotosynthese",
+          "Sie benötigt keine Zellatmung, solange sie Chloroplasten besitzt"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 55,
+        "category": "Genetik",
+        "question": "Bei einem dominant-rezessiven Erbgang werden Aa und Aa gekreuzt. Wie wahrscheinlich ist der Genotyp aa bei einem Nachkommen?",
+        "answers": [
+          "50 %",
+          "75 %",
+          "25 %",
+          "0 %"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 56,
+        "category": "Zellteilung",
+        "question": "Welcher Vorgang halbiert bei der Bildung menschlicher Keimzellen die Zahl der Chromosomen?",
+        "answers": [
+          "Die Mitose",
+          "Die Befruchtung",
+          "Die DNA-Verdopplung",
+          "Die Meiose"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 57,
+        "category": "Blutkreislauf",
+        "question": "Welches Gefäß führt beim Menschen sauerstoffreiches Blut von der Lunge zum Herzen?",
+        "answers": [
+          "Die Lungenvene",
+          "Die Lungenarterie",
+          "Die obere Hohlvene",
+          "Die untere Hohlvene"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 58,
+        "category": "Ökologie",
+        "question": "Warum gelangt nur ein Teil der Energie einer Nahrungsebene zur nächsten?",
+        "answers": [
+          "Weil Energie bei jeder Zellteilung neu entsteht",
+          "Weil unter anderem Zellatmung Wärme freisetzt und nicht alles gefressen wird",
+          "Weil Räuber keine Zellatmung betreiben",
+          "Weil Pflanzen den größten Teil ihrer Energie aus dem Boden beziehen"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 59,
+        "category": "Evolution",
+        "question": "In einer Bakterienpopulation überleben resistente Varianten eine Antibiotikabehandlung. Warum nimmt ihr Anteil anschließend häufig zu?",
+        "answers": [
+          "Alle überlebenden Bakterien verändern gezielt ihre Gene",
+          "Das Antibiotikum wird von Bakterien in Resistenzgene umgewandelt",
+          "Die überlebenden resistenten Bakterien vermehren sich weiter",
+          "Nichtresistente Bakterien geben ihre Resistenz an resistente ab"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 60,
+        "category": "DNA",
+        "question": "Welcher DNA-Strang ergänzt 5′-AGTC-3′ durch passende Basenpaarung, wenn er antiparallel darunter liegt?",
+        "answers": [
+          "3′-AGTC-5′",
+          "3′-UCAG-5′",
+          "3′-GACT-5′",
+          "3′-TCAG-5′"
+        ],
+        "correctIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "physik",
+    "title": "Physik – Grundlagen",
+    "category": "Naturwissenschaften",
+    "description": "Bewegung, Strom, Wärme und Wellen: Zehn kompakte Aufgaben mit plausiblen Antwortmöglichkeiten.",
+    "questions": [
+      {
+        "id": 61,
+        "category": "Bewegung",
+        "question": "Ein Auto beschleunigt gleichmäßig aus dem Stand mit 2 m/s². Welche Geschwindigkeit erreicht es nach 5 Sekunden?",
+        "answers": [
+          "2,5 m/s",
+          "10 m/s",
+          "25 m/s",
+          "5 m/s"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 62,
+        "category": "Kräfte",
+        "question": "Ein Buch liegt ruhig auf einem Tisch. Welche Aussage zur resultierenden Kraft auf das Buch ist richtig?",
+        "answers": [
+          "Sie entspricht der Gewichtskraft nach unten",
+          "Sie entspricht der Stützkraft nach oben",
+          "Sie ist null, weil sich Gewichts- und Stützkraft ausgleichen",
+          "Es wirken überhaupt keine Kräfte auf das Buch"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 63,
+        "category": "Energie",
+        "question": "Ein Körper bewegt sich doppelt so schnell wie zuvor. Wie verändert sich seine kinetische Energie bei gleicher Masse?",
+        "answers": [
+          "Sie vervierfacht sich",
+          "Sie verdoppelt sich",
+          "Sie halbiert sich",
+          "Sie bleibt gleich"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 64,
+        "category": "Dichte",
+        "question": "Ein Körper hat eine Masse von 180 g und ein Volumen von 200 cm³. Wie hoch ist seine mittlere Dichte?",
+        "answers": [
+          "1,11 g/cm³",
+          "9 g/cm³",
+          "0,09 g/cm³",
+          "0,9 g/cm³"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 65,
+        "category": "Elektrizität",
+        "question": "An einem ohmschen Widerstand von 6 Ω liegen 12 V an. Welche Stromstärke fließt?",
+        "answers": [
+          "0,5 A",
+          "2 A",
+          "6 A",
+          "72 A"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 66,
+        "category": "Schaltungen",
+        "question": "Zwei Widerstände mit je 10 Ω sind parallel geschaltet. Wie groß ist ihr Gesamtwiderstand?",
+        "answers": [
+          "20 Ω",
+          "10 Ω",
+          "5 Ω",
+          "2 Ω"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 67,
+        "category": "Leistung",
+        "question": "Ein Gerät mit 1.000 W Leistung läuft 30 Minuten lang. Wie viel elektrische Energie benötigt es?",
+        "answers": [
+          "0,5 kWh",
+          "2 kWh",
+          "30 kWh",
+          "500 kWh"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 68,
+        "category": "Wärmelehre",
+        "question": "Ein Metalllöffel und ein Holzlöffel liegen lange im selben Raum. Warum fühlt sich das Metall meist kälter an?",
+        "answers": [
+          "Metall hat grundsätzlich eine niedrigere Temperatur als Holz",
+          "Holz erzeugt bei Berührung Wärme",
+          "Metall enthält weniger Wärmeenergie pro Gegenstand",
+          "Metall leitet Wärme schneller von der Hand weg"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 69,
+        "category": "Wellen",
+        "question": "Die Frequenz einer Welle wird bei unveränderter Ausbreitungsgeschwindigkeit verdoppelt. Was passiert mit ihrer Wellenlänge?",
+        "answers": [
+          "Sie verdoppelt sich",
+          "Sie halbiert sich",
+          "Sie vervierfacht sich",
+          "Sie bleibt gleich"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 70,
+        "category": "Druck",
+        "question": "Die gleiche Kraft wirkt einmal auf eine große und einmal auf eine halb so große Fläche. Wie verändert sich der Druck auf der kleineren Fläche?",
+        "answers": [
+          "Er halbiert sich",
+          "Er bleibt gleich",
+          "Er verdoppelt sich",
+          "Er vervierfacht sich"
         ],
         "correctIndex": 2
       }
