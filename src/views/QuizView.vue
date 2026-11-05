@@ -2,14 +2,20 @@
 import { computed, onBeforeUnmount, ref } from 'vue'
 import QuizHeader from '../components/QuizHeader.vue'
 import QuestionCard from '../components/QuestionCard.vue'
-import ResultScreen from '../components/ResultScreen.vue'
-import { computed as vueComputed } from 'vue'
+
+
 import { useRoute, useRouter } from 'vue-router'
 import { catalog, session } from '../stores/quiz'
 const route = useRoute()
 const router = useRouter()
-const quiz = vueComputed(() => catalog.quizzes.find(q => q.id === route.params.id))
-const questions = quiz.value?.questions || []
+const quiz = computed(() => catalog.quizzes.find(q => q.id === route.params.id))
+const previous = session.result
+const isPractice = route.query.modus === 'wiederholen' &&
+  previous?.quizId === route.params.id && previous.missedIds.length > 0
+const questions = (quiz.value?.questions || []).filter(
+  question => !isPractice || previous.missedIds.includes(question.id)
+)
+const missedIds = ref([])
 const nextTimer = ref(null)
 
 const QUESTION_TIME = 20
@@ -27,10 +33,6 @@ const currentQuestion = computed(() => questions[currentIndex.value])
 
 const progress = computed(() =>
   Math.round(((currentIndex.value + (finished.value ? 1 : 0)) / questions.length) * 100)
-)
-
-const percentage = computed(() =>
-  Math.round((score.value / questions.length) * 100)
 )
 
 function startTimer() {
@@ -66,6 +68,8 @@ function lockAnswer(index) {
 
   if (index === currentQuestion.value.correctIndex) {
     score.value += 1
+  } else {
+    missedIds.value.push(currentQuestion.value.id)
   }
 
   nextTimer.value = window.setTimeout(nextQuestion, 900)
@@ -83,24 +87,23 @@ function nextQuestion() {
 }
 
 function finishQuiz() {
-  session.result = { quizId: route.params.id, score: score.value, total: questions.length, bestScore: Math.max(score.value, bestScore.value) }
   finished.value = true
-  router.replace('/ergebnis')
   clearTimer()
 
-  if (score.value > bestScore.value) {
+  if (!isPractice && score.value > bestScore.value) {
     bestScore.value = score.value
     localStorage.setItem('best-score-' + route.params.id, String(score.value))
   }
-}
 
-function restartQuiz() {
-  currentIndex.value = 0
-  score.value = 0
-  selectedIndex.value = null
-  locked.value = false
-  finished.value = false
-  startTimer()
+  session.result = {
+    quizId: route.params.id,
+    score: score.value,
+    total: questions.length,
+    bestScore: isPractice ? undefined : bestScore.value,
+    isPractice,
+    missedIds: [...missedIds.value]
+  }
+  router.replace('/ergebnis')
 }
 
 if (questions.length) startTimer()
@@ -113,6 +116,7 @@ onBeforeUnmount(() => { clearTimer(); window.clearTimeout(nextTimer.value) })
     <div class="background-orb orb-two"></div>
 
     <div class="quiz-layout">
+      <p v-if="isPractice" class="eyebrow">Wiederholungsrunde</p>
       <QuizHeader
         v-if="!finished"
         :current="currentIndex + 1"
@@ -130,19 +134,7 @@ onBeforeUnmount(() => { clearTimer(); window.clearTimeout(nextTimer.value) })
         @answer="chooseAnswer"
       />
 
-      <ResultScreen
-        v-else
-        :score="score"
-        :total="questions.length"
-        :percentage="percentage"
-        :best-score="bestScore"
-        @restart="restartQuiz"
-      />
-
-      <footer>
-        
-      </footer>
-    </div>
+</div>
   </main>
 </template>
 
