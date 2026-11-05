@@ -9,7 +9,7 @@ const quizTitle = computed(() => catalog.quizzes.find(quiz => quiz.id === sessio
 <template>
   <template v-if="session.result">
     <p class="result-topic">{{ quizTitle }}</p>
-    <ResultScreen :score="session.result.score" :total="session.result.total" :percentage="Math.round(session.result.score / session.result.total * 100)" :best-score="session.result.bestScore" @restart="router.push(`/quiz/${session.result.quizId}`)" />
+    <ResultScreen :is-practice="session.result.isPractice" :missed-count="session.result.missedIds.length" @practice="router.push({ path: `/quiz/${session.result.quizId}`, query: { modus: 'wiederholen' } })" :score="session.result.score" :total="session.result.total" :percentage="Math.round(session.result.score / session.result.total * 100)" :best-score="session.result.bestScore" @restart="router.push(`/quiz/${session.result.quizId}`)" />
   </template>
   <section v-else class="result-card"><h1>Noch kein Ergebnis</h1><p>Starte zuerst eine Quizrunde. Nach dem Neuladen ist das letzte Rundenergebnis nicht mehr verfügbar.</p><RouterLink class="primary-button start-link" to="/">Zur Quiz-Auswahl</RouterLink></section>
 </template>

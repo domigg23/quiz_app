@@ -64,6 +64,66 @@
           "Marokko"
         ],
         "correctIndex": 1
+      },
+      {
+        "id": 21.0,
+        "category": "Fußball",
+        "question": "Wo fand die erste Fußball-WM der Männer 1930 statt?",
+        "answers": [
+          "Uruguay",
+          "Italien",
+          "Brasilien",
+          "Frankreich"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 22.0,
+        "category": "Fußball",
+        "question": "Welche Nationalmannschaft gewann die Fußball-EM der Männer 2004?",
+        "answers": [
+          "Portugal",
+          "Griechenland",
+          "Frankreich",
+          "Tschechien"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 23.0,
+        "category": "Fußball",
+        "question": "Welches Land gewann die Fußball-WM der Männer 2010?",
+        "answers": [
+          "Niederlande",
+          "Deutschland",
+          "Spanien",
+          "Uruguay"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 24.0,
+        "category": "Fußball",
+        "question": "In welcher Stadt fand das Finale der Fußball-WM der Männer 2006 statt?",
+        "answers": [
+          "München",
+          "Hamburg",
+          "Dortmund",
+          "Berlin"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 25.0,
+        "category": "Fußball",
+        "question": "Welches Land gewann die Fußball-WM der Frauen 2023?",
+        "answers": [
+          "Spanien",
+          "England",
+          "Schweden",
+          "Australien"
+        ],
+        "correctIndex": 0
       }
     ]
   },
@@ -132,6 +192,66 @@
           "Judo"
         ],
         "correctIndex": 2
+      },
+      {
+        "id": 26.0,
+        "category": "Tennis",
+        "question": "In welcher Stadt wird das Tennisturnier Wimbledon ausgetragen?",
+        "answers": [
+          "Paris",
+          "London",
+          "Melbourne",
+          "New York"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 27.0,
+        "category": "Basketball",
+        "question": "Für welches NBA-Team gewann Michael Jordan sechs Meisterschaften?",
+        "answers": [
+          "Boston Celtics",
+          "Los Angeles Lakers",
+          "Chicago Bulls",
+          "New York Knicks"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 28.0,
+        "category": "Leichtathletik",
+        "question": "Bei welcher Laufdisziplin wird ein Staffelstab weitergegeben?",
+        "answers": [
+          "Marathon",
+          "Hürdenlauf",
+          "Zehnkampf",
+          "Staffellauf"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 29.0,
+        "category": "Radsport",
+        "question": "In welcher Farbe fährt der Gesamtführende bei der Tour de France traditionell?",
+        "answers": [
+          "Gelb",
+          "Rot",
+          "Blau",
+          "Grün"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 30.0,
+        "category": "Eishockey",
+        "question": "Womit wird beim Eishockey gespielt?",
+        "answers": [
+          "Mit einem Federball",
+          "Mit einem Puck",
+          "Mit einer Kugel",
+          "Mit einem Rugbyball"
+        ],
+        "correctIndex": 1
       }
     ]
   },
@@ -200,6 +320,66 @@
           "Snowboard"
         ],
         "correctIndex": 0
+      },
+      {
+        "id": 31.0,
+        "category": "Olympia",
+        "question": "Wo fanden die Olympischen Sommerspiele 2000 statt?",
+        "answers": [
+          "Atlanta",
+          "Athen",
+          "Sydney",
+          "Peking"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "id": 32.0,
+        "category": "Wintersport",
+        "question": "In welcher österreichischen Stadt fanden die Olympischen Winterspiele 1964 und 1976 statt?",
+        "answers": [
+          "Salzburg",
+          "Wien",
+          "Graz",
+          "Innsbruck"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "id": 33.0,
+        "category": "Wintersport",
+        "question": "Bei welcher Sportart schieben Teams Steine über das Eis und benutzen Besen?",
+        "answers": [
+          "Curling",
+          "Eishockey",
+          "Eiskunstlauf",
+          "Bobfahren"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": 34.0,
+        "category": "Olympia",
+        "question": "Welche Stadt war Gastgeberin der Olympischen Sommerspiele 2012?",
+        "answers": [
+          "Rio de Janeiro",
+          "London",
+          "Tokio",
+          "Athen"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": 35.0,
+        "category": "Wintersport",
+        "question": "Bei welcher Disziplin springen Athleten mit Skiern von einer Schanze möglichst weit?",
+        "answers": [
+          "Skilanglauf",
+          "Slalom",
+          "Skispringen",
+          "Eisschnelllauf"
+        ],
+        "correctIndex": 2
       }
     ]
   },
