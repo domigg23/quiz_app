@@ -11,7 +11,7 @@ if(existsSync(envFile))process.loadEnvFile(fileURLToPath(envFile))
 const testName=()=> 'quiz_app_test_'+randomBytes(8).toString('hex')
 async function cleanup(db,name){
   if(!/^quiz_app_test_[a-f0-9]{16}$/.test(name))throw new Error('Unsafe test database name')
-  try{await db.pool.query('DROP DATABASE \`'+name+'\`')}finally{await db.close()}
+  try{await db.query('DROP DATABASE \`'+name+'\`')}finally{await db.close()}
 }
 
 test('MySQL preserves questions and rounds across reconnects; imports do not overwrite edits',async()=>{
@@ -21,11 +21,11 @@ test('MySQL preserves questions and rounds across reconnects; imports do not ove
     const quizzes=await readQuizzes(db)
     assert.equal(quizzes.flatMap(q=>q.questions).length,70)
     const questionText="Eigene Frage mit ' und Ω?"
-    const [inserted]=await db.pool.execute(
+    const [inserted]=await db.execute(
       "INSERT INTO questions(quiz_id,category,question,answers_json,correct_index,position,explanation,difficulty) VALUES(?,?,?,?,?,?,?,?)",
       ['fussball','Test',questionText,JSON.stringify(['A','B','C','D']),1,99,'Weil B richtig ist.','schwer'])
     const id=inserted.insertId
-    await db.pool.execute('UPDATE questions SET question=? WHERE id=?',['Eigene Änderung',1])
+    await db.execute('UPDATE questions SET question=? WHERE id=?',['Eigene Änderung',1])
     await db.saveRound({id:'00000000-0000-0000-0000-000000000001',score:4})
     await db.close()
     db=await openQuizDatabase({databaseName:name})

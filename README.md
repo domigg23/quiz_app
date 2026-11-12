@@ -83,7 +83,7 @@ Eigene MySQL-Änderungen werden nicht automatisch über Git verteilt.
 - src/stores/quiz.js: Katalog und Ergebniszustand.
 - server/index.js: eigenständiger HTTP-Server, Konfiguration und statische Dateien.
 - server/api.js: Endpunkte und Quizlogik.
-- server/database.js: asynchrone MySQL-Abfragen über mysql2.
+- server/database.js: eine einzelne MySQL-Verbindung über mysql2, ohne Verbindungspool.
 - server/seed-quizzes.json: mitgelieferter Fragenbestand.
 - server/.env.example: Konfigurationsvorlage ohne Zugangsdaten.
 - scripts/dev.js: startet Client und Server als getrennte Prozesse.
@@ -99,6 +99,7 @@ GET /api/runs/:id/result: abgeschlossenes Ergebnis.
 
 ## Zuverlässigkeit
 SQL-Werte werden als Parameter übergeben.
+Die Datenbank verwendet eine einzelne Verbindung ohne Pool. Eine kleine Warteschlange führt Datenbankvorgänge nacheinander aus.
 InnoDB-Transaktionen und SELECT FOR UPDATE sperren eine Runde während der Auswertung.
 So verändern gleichzeitige Anfragen nicht gegenseitig den Punktestand.
 Frage-IDs werden von MySQL mit AUTO_INCREMENT vergeben.
