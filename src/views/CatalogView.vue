@@ -4,6 +4,8 @@ import { catalog, selectedId, loadQuizzes } from '../stores/quiz'
 
 const search = ref('')
 const category = ref('')
+const difficulty = ref('alle')
+const countFor = quiz => quiz.questions.filter(q => difficulty.value === 'alle' || q.difficulty === difficulty.value).length
 const categories = computed(() => [...new Set(catalog.quizzes.map(quiz => quiz.category))].sort())
 const filteredQuizzes = computed(() => {
   const term = search.value.trim().toLocaleLowerCase('de')
@@ -45,6 +47,14 @@ function resetFilters() {
           <option v-for="item in categories" :key="item" :value="item">{{ item }}</option>
         </select>
       </label>
+      <label for="quiz-difficulty">Schwierigkeit
+        <select id="quiz-difficulty" v-model="difficulty">
+          <option value="alle">Alle Schwierigkeiten</option>
+          <option value="leicht">Leicht</option>
+          <option value="mittel">Mittel</option>
+          <option value="schwer">Schwer</option>
+        </select>
+      </label>
     </div>
     <p class="catalog-count" role="status">{{ filteredQuizzes.length }} von {{ catalog.quizzes.length }} Themen</p>
     <div v-if="filteredQuizzes.length" class="master-detail">
@@ -53,15 +63,16 @@ function resetFilters() {
           :class="{ active: selected?.id === quiz.id }" :aria-pressed="selected?.id === quiz.id"
           aria-controls="quiz-detail" @click="selectedId = quiz.id">
           <span class="eyebrow">{{ quiz.category }}</span>
-          <strong>{{ quiz.title }}</strong><span>{{ quiz.questions.length }} Fragen</span>
+          <strong>{{ quiz.title }}</strong><span>{{ countFor(quiz) }} Fragen</span>
         </button>
       </aside>
       <section v-if="selected" id="quiz-detail" class="question-card quiz-detail" aria-labelledby="detail-title">
         <p class="eyebrow">{{ selected.category }}</p><h2 id="detail-title">{{ selected.title }}</h2>
         <p>{{ selected.description }}</p>
-        <dl class="quiz-facts"><div><dt>Umfang</dt><dd>{{ selected.questions.length }} Fragen</dd></div><div><dt>Zeitlimit</dt><dd>20 Sekunden je Frage</dd></div></dl>
+        <dl class="quiz-facts"><div><dt>Umfang</dt><dd>{{ countFor(selected) }} Fragen</dd></div><div><dt>Zeitlimit</dt><dd>20 Sekunden je Frage</dd></div></dl>
         <p class="hint">Pro Frage ist eine Antwort richtig. Für jede richtige Antwort erhältst du einen Punkt.</p>
-        <RouterLink class="primary-button start-link" :to="`/quiz/${selected.id}`">{{ selected.title }} starten →</RouterLink>
+        <RouterLink class="primary-button start-link" :to="{ path: `/quiz/${selected.id}`, query: { schwierigkeit: difficulty } }" v-if="countFor(selected)">{{ selected.title }} starten →</RouterLink>
+        <p v-if="!countFor(selected)" role="status">Für diese Schwierigkeit gibt es hier noch keine Fragen. Wähle eine andere Stufe.</p>
       </section>
     </div>
     <section v-else class="question-card empty-state">

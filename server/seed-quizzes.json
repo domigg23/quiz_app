@@ -1,0 +1,1038 @@
+[
+  {
+    "id": "fussball",
+    "title": "Fußball",
+    "category": "Sport",
+    "description": "Teste dein Wissen über Fußballstars, Vereine und Weltmeisterschaften.",
+    "questions": [
+      {
+        "id": 1,
+        "category": "Fußball",
+        "question": "Welches Land gewann die Fußball-WM der Männer 2014?",
+        "answers": [
+          "Brasilien",
+          "Deutschland",
+          "Argentinien",
+          "Spanien"
+        ],
+        "correctIndex": 1,
+        "explanation": "Deutschland besiegte Argentinien im WM-Finale 2014 mit 1:0 nach Verlängerung. Mario Götze erzielte das Tor.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 2,
+        "category": "Fußball",
+        "question": "Aus welchem Land stammt Lionel Messi?",
+        "answers": [
+          "Portugal",
+          "Uruguay",
+          "Brasilien",
+          "Argentinien"
+        ],
+        "correctIndex": 3,
+        "explanation": "Lionel Messi wurde in Rosario in Argentinien geboren und spielt für die argentinische Nationalmannschaft.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 3,
+        "category": "Fußball",
+        "question": "Mit welcher Sportart wurde Pelé weltberühmt?",
+        "answers": [
+          "Fußball",
+          "Basketball",
+          "Tennis",
+          "Handball"
+        ],
+        "correctIndex": 0,
+        "explanation": "Pelé war ein brasilianischer Fußballspieler und wurde mit Brasilien dreimal Weltmeister.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 4,
+        "category": "Fußball",
+        "question": "In welcher Stadt ist der Verein FC Barcelona beheimatet?",
+        "answers": [
+          "Madrid",
+          "Sevilla",
+          "Barcelona",
+          "Valencia"
+        ],
+        "correctIndex": 2,
+        "explanation": "Der FC Barcelona ist nach seiner Heimatstadt Barcelona in Spanien benannt.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 5,
+        "category": "Fußball",
+        "question": "Welches Land gewann die Fußball-WM der Männer 2022?",
+        "answers": [
+          "Frankreich",
+          "Argentinien",
+          "Kroatien",
+          "Marokko"
+        ],
+        "correctIndex": 1,
+        "explanation": "Argentinien besiegte Frankreich im Finale 2022 im Elfmeterschießen.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 21,
+        "category": "Fußball",
+        "question": "Wo fand die erste Fußball-WM der Männer 1930 statt?",
+        "answers": [
+          "Uruguay",
+          "Italien",
+          "Brasilien",
+          "Frankreich"
+        ],
+        "correctIndex": 0,
+        "explanation": "Die erste Fußball-WM der Männer fand 1930 in Uruguay statt. Uruguay gewann auch das Turnier.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 22,
+        "category": "Fußball",
+        "question": "Welche Nationalmannschaft gewann die Fußball-EM der Männer 2004?",
+        "answers": [
+          "Portugal",
+          "Griechenland",
+          "Frankreich",
+          "Tschechien"
+        ],
+        "correctIndex": 1,
+        "explanation": "Griechenland besiegte Gastgeber Portugal im EM-Finale 2004 mit 1:0.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 23,
+        "category": "Fußball",
+        "question": "Welches Land gewann die Fußball-WM der Männer 2010?",
+        "answers": [
+          "Niederlande",
+          "Deutschland",
+          "Spanien",
+          "Uruguay"
+        ],
+        "correctIndex": 2,
+        "explanation": "Spanien gewann das Finale 2010 gegen die Niederlande mit 1:0 nach Verlängerung.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 24,
+        "category": "Fußball",
+        "question": "In welcher Stadt fand das Finale der Fußball-WM der Männer 2006 statt?",
+        "answers": [
+          "München",
+          "Hamburg",
+          "Dortmund",
+          "Berlin"
+        ],
+        "correctIndex": 3,
+        "explanation": "Das WM-Finale 2006 zwischen Italien und Frankreich wurde im Berliner Olympiastadion gespielt.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 25,
+        "category": "Fußball",
+        "question": "Welches Land gewann die Fußball-WM der Frauen 2023?",
+        "answers": [
+          "Spanien",
+          "England",
+          "Schweden",
+          "Australien"
+        ],
+        "correctIndex": 0,
+        "explanation": "Spanien gewann das WM-Finale der Frauen 2023 gegen England mit 1:0.",
+        "difficulty": "schwer"
+      }
+    ]
+  },
+  {
+    "id": "sportmix",
+    "title": "Sportmix",
+    "category": "Sport",
+    "description": "Von Tennis bis Basketball: Erkennst du diese Sportarten und ihre Stars?",
+    "questions": [
+      {
+        "id": 6,
+        "category": "Sportmix",
+        "question": "In welcher Sportart wurde Michael Jordan berühmt?",
+        "answers": [
+          "Baseball",
+          "Eishockey",
+          "Basketball",
+          "Tennis"
+        ],
+        "correctIndex": 2,
+        "explanation": "Michael Jordan wurde vor allem als Basketballspieler der Chicago Bulls bekannt.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 7,
+        "category": "Sportmix",
+        "question": "Mit welcher Sportart verbindet man Roger Federer?",
+        "answers": [
+          "Tennis",
+          "Golf",
+          "Badminton",
+          "Squash"
+        ],
+        "correctIndex": 0,
+        "explanation": "Roger Federer ist ein Schweizer Tennisspieler und mehrfacher Grand-Slam-Sieger.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 8,
+        "category": "Sportmix",
+        "question": "Welche Sportart wird bei der Tour de France ausgeübt?",
+        "answers": [
+          "Laufen",
+          "Schwimmen",
+          "Skifahren",
+          "Radsport"
+        ],
+        "correctIndex": 3,
+        "explanation": "Die Tour de France ist ein mehrtägiges Straßenradrennen.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 9,
+        "category": "Sportmix",
+        "question": "In welcher Sportart wurde Michael Phelps als Olympiasieger bekannt?",
+        "answers": [
+          "Rudern",
+          "Schwimmen",
+          "Turnen",
+          "Segeln"
+        ],
+        "correctIndex": 1,
+        "explanation": "Michael Phelps gewann seine olympischen Medaillen im Schwimmen.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 10,
+        "category": "Sportmix",
+        "question": "Welche Sportart verbindet man mit Muhammad Ali?",
+        "answers": [
+          "Fechten",
+          "Ringen",
+          "Boxen",
+          "Judo"
+        ],
+        "correctIndex": 2,
+        "explanation": "Muhammad Ali war Boxweltmeister im Schwergewicht.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 26,
+        "category": "Tennis",
+        "question": "In welcher Stadt wird das Tennisturnier Wimbledon ausgetragen?",
+        "answers": [
+          "Paris",
+          "London",
+          "Melbourne",
+          "New York"
+        ],
+        "correctIndex": 1,
+        "explanation": "Wimbledon ist ein Stadtteil von London. Dort findet das traditionsreiche Rasenturnier statt.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 27,
+        "category": "Basketball",
+        "question": "Für welches NBA-Team gewann Michael Jordan sechs Meisterschaften?",
+        "answers": [
+          "Boston Celtics",
+          "Los Angeles Lakers",
+          "Chicago Bulls",
+          "New York Knicks"
+        ],
+        "correctIndex": 2,
+        "explanation": "Jordan gewann mit den Chicago Bulls die Titel 1991–1993 und 1996–1998.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 28,
+        "category": "Leichtathletik",
+        "question": "Bei welcher Laufdisziplin wird ein Staffelstab weitergegeben?",
+        "answers": [
+          "Marathon",
+          "Hürdenlauf",
+          "Zehnkampf",
+          "Staffellauf"
+        ],
+        "correctIndex": 3,
+        "explanation": "Beim Staffellauf wird ein Staffelstab innerhalb einer Wechselzone an die nächste Person übergeben.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 29,
+        "category": "Radsport",
+        "question": "In welcher Farbe fährt der Gesamtführende bei der Tour de France traditionell?",
+        "answers": [
+          "Gelb",
+          "Rot",
+          "Blau",
+          "Grün"
+        ],
+        "correctIndex": 0,
+        "explanation": "Das Gelbe Trikot kennzeichnet den Führenden der Gesamtwertung; Grün steht für die Punktewertung.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 30,
+        "category": "Eishockey",
+        "question": "Womit wird beim Eishockey gespielt?",
+        "answers": [
+          "Mit einem Federball",
+          "Mit einem Puck",
+          "Mit einer Kugel",
+          "Mit einem Rugbyball"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ein Puck ist eine flache, harte Gummischeibe, die über das Eis gespielt wird.",
+        "difficulty": "leicht"
+      }
+    ]
+  },
+  {
+    "id": "olympia",
+    "title": "Olympia & Wintersport",
+    "category": "Sport",
+    "description": "Entdecke olympische Geschichte und bekannte Wintersportarten.",
+    "questions": [
+      {
+        "id": 11,
+        "category": "Olympia",
+        "question": "In welcher Stadt fanden die ersten Olympischen Spiele der Neuzeit 1896 statt?",
+        "answers": [
+          "Athen",
+          "Rom",
+          "Paris",
+          "London"
+        ],
+        "correctIndex": 0,
+        "explanation": "Die ersten Olympischen Spiele der Neuzeit fanden 1896 in Athen statt.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 12,
+        "category": "Olympia",
+        "question": "Wie viele Ringe zeigt das olympische Symbol?",
+        "answers": [
+          "Vier",
+          "Sechs",
+          "Sieben",
+          "Fünf"
+        ],
+        "correctIndex": 3,
+        "explanation": "Das olympische Symbol besteht aus fünf miteinander verbundenen Ringen.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 13,
+        "category": "Leichtathletik",
+        "question": "Aus welchem Land stammt der Sprinter Usain Bolt?",
+        "answers": [
+          "USA",
+          "Jamaika",
+          "Kenia",
+          "Kanada"
+        ],
+        "correctIndex": 1,
+        "explanation": "Usain Bolt stammt aus Jamaika und wurde als Sprinter über 100 und 200 Meter bekannt.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 14,
+        "category": "Wintersport",
+        "question": "Welche zwei Sportarten werden beim Biathlon kombiniert?",
+        "answers": [
+          "Skispringen und Eislaufen",
+          "Rodeln und Schießen",
+          "Skilanglauf und Schießen",
+          "Abfahrt und Eishockey"
+        ],
+        "correctIndex": 2,
+        "explanation": "Biathlon verbindet Ausdauer beim Skilanglauf mit Präzision beim Schießen.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 15,
+        "category": "Wintersport",
+        "question": "In welcher Sportart wurde Marcel Hirscher bekannt?",
+        "answers": [
+          "Ski alpin",
+          "Eiskunstlauf",
+          "Skispringen",
+          "Snowboard"
+        ],
+        "correctIndex": 0,
+        "explanation": "Marcel Hirscher wurde im alpinen Skisport besonders durch Slalom und Riesenslalom bekannt.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 31,
+        "category": "Olympia",
+        "question": "Wo fanden die Olympischen Sommerspiele 2000 statt?",
+        "answers": [
+          "Atlanta",
+          "Athen",
+          "Sydney",
+          "Peking"
+        ],
+        "correctIndex": 2,
+        "explanation": "Sydney in Australien war Gastgeberin der Olympischen Sommerspiele 2000.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 32,
+        "category": "Wintersport",
+        "question": "In welcher österreichischen Stadt fanden die Olympischen Winterspiele 1964 und 1976 statt?",
+        "answers": [
+          "Salzburg",
+          "Wien",
+          "Graz",
+          "Innsbruck"
+        ],
+        "correctIndex": 3,
+        "explanation": "Innsbruck richtete die Olympischen Winterspiele sowohl 1964 als auch 1976 aus.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 33,
+        "category": "Wintersport",
+        "question": "Bei welcher Sportart schieben Teams Steine über das Eis und benutzen Besen?",
+        "answers": [
+          "Curling",
+          "Eishockey",
+          "Eiskunstlauf",
+          "Bobfahren"
+        ],
+        "correctIndex": 0,
+        "explanation": "Beim Curling gleiten Steine auf dem Eis. Wischen mit Besen beeinflusst ihre Bewegung.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 34,
+        "category": "Olympia",
+        "question": "Welche Stadt war Gastgeberin der Olympischen Sommerspiele 2012?",
+        "answers": [
+          "Rio de Janeiro",
+          "London",
+          "Tokio",
+          "Athen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Die Olympischen Sommerspiele 2012 fanden in London statt.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 35,
+        "category": "Wintersport",
+        "question": "Bei welcher Disziplin springen Athleten mit Skiern von einer Schanze möglichst weit?",
+        "answers": [
+          "Skilanglauf",
+          "Slalom",
+          "Skispringen",
+          "Eisschnelllauf"
+        ],
+        "correctIndex": 2,
+        "explanation": "Beim Skispringen fahren die Athleten eine Schanze hinunter und springen anschließend möglichst weit und kontrolliert.",
+        "difficulty": "leicht"
+      }
+    ]
+  },
+  {
+    "id": "mathematik",
+    "title": "Mathematik im Alltag",
+    "category": "Wissen",
+    "description": "Zehn Aufgaben zu Prozenten, Geometrie und Wahrscheinlichkeit – vom Einstieg bis zum kniffligen Alltagsproblem.",
+    "questions": [
+      {
+        "id": 16,
+        "category": "Prozentrechnung",
+        "question": "Ein Trikot kostet 80 Euro. Du erhältst 25 % Rabatt, also ein Viertel des Preises. Wie viel bezahlst du?",
+        "answers": [
+          "20 Euro",
+          "55 Euro",
+          "60 Euro",
+          "75 Euro"
+        ],
+        "correctIndex": 2,
+        "explanation": "25 % von 80 Euro sind 20 Euro. Nach dem Rabatt bleiben 80 − 20 = 60 Euro.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 17,
+        "category": "Geometrie",
+        "question": "Ein Rechteck ist 5 Meter lang und 3 Meter breit. Die Fläche berechnest du mit Länge mal Breite. Wie groß ist sie?",
+        "answers": [
+          "15 Quadratmeter",
+          "8 Quadratmeter",
+          "16 Quadratmeter",
+          "30 Quadratmeter"
+        ],
+        "correctIndex": 0,
+        "explanation": "Die Rechteckfläche ist Länge mal Breite: 5 m × 3 m = 15 m².",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 18,
+        "category": "Einheiten",
+        "question": "Ein Kilometer entspricht 1.000 Metern. Wie viele Meter sind 2,5 Kilometer?",
+        "answers": [
+          "250 Meter",
+          "25 Meter",
+          "25.000 Meter",
+          "2.500 Meter"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ein Kilometer hat 1.000 Meter. Deshalb sind 2,5 × 1.000 = 2.500 Meter.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 19,
+        "category": "Durchschnitt",
+        "question": "Du erzielst in drei Runden 4, 6 und 8 Punkte. Für den Durchschnitt teilst du die Summe durch drei. Was ist das Ergebnis?",
+        "answers": [
+          "5 Punkte",
+          "6 Punkte",
+          "7 Punkte",
+          "18 Punkte"
+        ],
+        "correctIndex": 1,
+        "explanation": "Die Summe ist 4 + 6 + 8 = 18. Geteilt durch drei ergibt das 6 Punkte.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 20,
+        "category": "Brüche",
+        "question": "Eine Pizza wird in acht gleich große Stücke geteilt. Du isst zwei davon. Welcher gekürzte Bruch beschreibt deinen Anteil?",
+        "answers": [
+          "Ein Halb",
+          "Drei Viertel",
+          "Ein Viertel",
+          "Ein Achtel"
+        ],
+        "correctIndex": 2,
+        "explanation": "Zwei von acht Stücken sind 2/8. Mit 2 gekürzt ergibt das 1/4.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 36,
+        "category": "Prozentrechnung",
+        "question": "Ein Preis steigt zuerst um 20 % und sinkt danach um 20 %. Wie liegt er nun gegenüber dem ursprünglichen Preis?",
+        "answers": [
+          "4 % niedriger",
+          "Unverändert",
+          "4 % höher",
+          "8 % niedriger"
+        ],
+        "correctIndex": 0,
+        "explanation": "Zum Beispiel werden aus 100 Euro zunächst 120 Euro. 20 % von 120 sind 24: Es bleiben 96 Euro, also 4 % weniger.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 37,
+        "category": "Geschwindigkeit",
+        "question": "Du fährst dieselbe Strecke hin mit 30 km/h und zurück mit 60 km/h. Wie hoch ist deine Durchschnittsgeschwindigkeit ohne Pausen?",
+        "answers": [
+          "45 km/h",
+          "50 km/h",
+          "40 km/h",
+          "35 km/h"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bei 60 km pro Strecke dauert die Hinfahrt 2 Stunden und die Rückfahrt 1 Stunde. 120 km ÷ 3 h = 40 km/h.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 38,
+        "category": "Wahrscheinlichkeit",
+        "question": "Ein fairer Würfel wird zweimal geworfen. Wie groß ist die Wahrscheinlichkeit, beide Male eine gerade Zahl zu würfeln?",
+        "answers": [
+          "1/2",
+          "1/3",
+          "1/6",
+          "1/4"
+        ],
+        "correctIndex": 3,
+        "explanation": "Pro Wurf sind drei von sechs Zahlen gerade. Bei unabhängigen Würfen gilt 1/2 × 1/2 = 1/4.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 39,
+        "category": "Maßstab",
+        "question": "Auf einem Plan im Maßstab 1:200 ist ein rechteckiger Raum 3 cm lang und 2 cm breit. Wie groß ist seine tatsächliche Fläche?",
+        "answers": [
+          "12 m²",
+          "24 m²",
+          "6 m²",
+          "48 m²"
+        ],
+        "correctIndex": 1,
+        "explanation": "3 cm entsprechen 6 m und 2 cm entsprechen 4 m. Die Fläche beträgt 6 × 4 = 24 m².",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 40,
+        "category": "Durchschnitt",
+        "question": "Vier Tests ergeben im Durchschnitt 14 Punkte. Wie viele Punkte brauchst du im fünften Test, damit der Gesamtdurchschnitt 15 beträgt?",
+        "answers": [
+          "16 Punkte",
+          "18 Punkte",
+          "19 Punkte",
+          "20 Punkte"
+        ],
+        "correctIndex": 2,
+        "explanation": "Vier Tests mit Durchschnitt 14 ergeben 56 Punkte. Für fünf Tests mit Durchschnitt 15 braucht man 75 Punkte: 75 − 56 = 19.",
+        "difficulty": "schwer"
+      }
+    ]
+  },
+  {
+    "id": "chemie",
+    "title": "Chemie – Grundlagen",
+    "category": "Naturwissenschaften",
+    "description": "Atome, Bindungen und Reaktionen: Zehn Fragen, die chemisches Verständnis statt bloßes Auswendiglernen testen.",
+    "questions": [
+      {
+        "id": 41,
+        "category": "Atombau",
+        "question": "Ein elektrisch neutrales Atom hat 17 Protonen und 18 Neutronen. Wie viele Elektronen besitzt es?",
+        "answers": [
+          "18",
+          "35",
+          "1",
+          "17"
+        ],
+        "correctIndex": 3,
+        "explanation": "In einem neutralen Atom ist die Zahl der negativ geladenen Elektronen gleich der Zahl der positiv geladenen Protonen.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 42,
+        "category": "Isotope",
+        "question": "Worin unterscheiden sich zwei Isotope desselben Elements?",
+        "answers": [
+          "In der Protonenzahl",
+          "In der Neutronenzahl",
+          "Immer in der Elektronenzahl",
+          "In der Ladung jedes Protons"
+        ],
+        "correctIndex": 1,
+        "explanation": "Isotope haben dieselbe Protonenzahl und gehören deshalb zum selben Element; ihre Neutronenzahl ist unterschiedlich.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 43,
+        "category": "Ionen",
+        "question": "Ein neutrales Magnesiumatom gibt zwei Elektronen ab. Welche Ladung hat das entstehende Ion?",
+        "answers": [
+          "2−",
+          "1+",
+          "2+",
+          "0"
+        ],
+        "correctIndex": 2,
+        "explanation": "Durch die Abgabe von zwei negativ geladenen Elektronen bleiben zwei positive Ladungen im Überschuss: Mg²⁺.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 44,
+        "category": "Chemische Bindung",
+        "question": "Was hält die Teilchen in einem Kochsalzkristall hauptsächlich zusammen?",
+        "answers": [
+          "Die Anziehung entgegengesetzt geladener Ionen",
+          "Gemeinsame Elektronenpaare zwischen NaCl-Molekülen",
+          "Wasserstoffbrücken zwischen Natrium und Chlor",
+          "Die Anziehung elektrisch neutraler Atome"
+        ],
+        "correctIndex": 0,
+        "explanation": "Kochsalz besteht aus positiv geladenen Natriumionen und negativ geladenen Chloridionen, die sich elektrostatisch anziehen.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 45,
+        "category": "Reaktionsgleichungen",
+        "question": "Welche Koeffizienten gleichen die Gleichung H₂ + O₂ → H₂O aus?",
+        "answers": [
+          "1 : 1 : 1",
+          "2 : 2 : 1",
+          "1 : 2 : 2",
+          "2 : 1 : 2"
+        ],
+        "correctIndex": 3,
+        "explanation": "2 H₂ + O₂ → 2 H₂O enthält auf beiden Seiten vier Wasserstoffatome und zwei Sauerstoffatome.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 46,
+        "category": "Lösungen",
+        "question": "10 g Kochsalz werden vollständig in 90 g Wasser gelöst. Welchen Massenanteil hat das Salz in der Lösung?",
+        "answers": [
+          "9 %",
+          "10 %",
+          "11,1 %",
+          "90 %"
+        ],
+        "correctIndex": 1,
+        "explanation": "Die Lösung wiegt 10 + 90 = 100 g. Der Salzanteil ist 10/100 = 0,10 = 10 %.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 47,
+        "category": "Stofftrennung",
+        "question": "Wie lässt sich gelöstes Kochsalz aus Salzwasser als Feststoff zurückgewinnen?",
+        "answers": [
+          "Durch Filtrieren mit Filterpapier",
+          "Durch Absetzenlassen",
+          "Durch Verdampfen des Wassers",
+          "Durch Abgießen der oberen Flüssigkeit"
+        ],
+        "correctIndex": 2,
+        "explanation": "Wasser kann verdampfen, während das gelöste Salz als Feststoff zurückbleibt.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 48,
+        "category": "Katalyse",
+        "question": "Wie beschleunigt ein Katalysator eine chemische Reaktion?",
+        "answers": [
+          "Er ermöglicht einen Reaktionsweg mit geringerer Aktivierungsenergie",
+          "Er erhöht die Energie der Produkte dauerhaft",
+          "Er verschiebt das Gleichgewicht vollständig zu den Produkten",
+          "Er wird dabei dauerhaft als zusätzlicher Ausgangsstoff verbraucht"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ein Katalysator bietet einen alternativen Reaktionsweg mit geringerer Aktivierungsenergie und wird dabei insgesamt nicht verbraucht.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 49,
+        "category": "Massenerhaltung",
+        "question": "In einem verschlossenen Gefäß reagieren Essig und Natron unter Gasbildung. Was passiert mit der Gesamtmasse des geschlossenen Gefäßes samt Inhalt?",
+        "answers": [
+          "Sie sinkt um die Masse des entstandenen Gases",
+          "Sie steigt, weil neue Teilchen entstehen",
+          "Sie sinkt, weil Energie frei wird",
+          "Sie bleibt bei einer gewöhnlichen chemischen Betrachtung gleich"
+        ],
+        "correctIndex": 3,
+        "explanation": "Im geschlossenen Gefäß bleibt auch das gebildete Gas enthalten. Bei einer chemischen Reaktion bleibt die Gesamtmasse praktisch erhalten.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 50,
+        "category": "Redoxreaktionen",
+        "question": "Ein Eisenatom wird zu einem Fe²⁺-Ion. Was geschieht dabei?",
+        "answers": [
+          "Es nimmt zwei Elektronen auf und wird reduziert",
+          "Es gibt zwei Elektronen ab und wird oxidiert",
+          "Es nimmt zwei Protonen auf und wird oxidiert",
+          "Es gibt zwei Neutronen ab und wird reduziert"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fe → Fe²⁺ + 2 e⁻. Die Abgabe von Elektronen heißt Oxidation.",
+        "difficulty": "schwer"
+      }
+    ]
+  },
+  {
+    "id": "biologie",
+    "title": "Biologie – Grundlagen",
+    "category": "Naturwissenschaften",
+    "description": "Zellen, Vererbung und Ökosysteme: Zehn Fragen zu biologischen Zusammenhängen und typischen Denkfehlern.",
+    "questions": [
+      {
+        "id": 51,
+        "category": "Zellbiologie",
+        "question": "Welche Struktur kommt sowohl in Bakterienzellen als auch in menschlichen Körperzellen vor?",
+        "answers": [
+          "Ein Zellkern",
+          "Chloroplasten",
+          "Ribosomen",
+          "Mitochondrien"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ribosomen stellen Proteine her und kommen sowohl in Bakterien als auch in menschlichen Zellen vor.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 52,
+        "category": "Osmose",
+        "question": "Eine Pflanzenzelle liegt in einer stark konzentrierten Salzlösung. Was passiert zunächst mit ihrem Wasser?",
+        "answers": [
+          "Es strömt überwiegend aus der Zelle",
+          "Es strömt überwiegend in die Zelle",
+          "Es bleibt wegen der Zellwand vollständig in der Zelle",
+          "Es wird in der Zelle zu Salz umgewandelt"
+        ],
+        "correctIndex": 0,
+        "explanation": "Durch Osmose wandert Wasser überwiegend zur stärker konzentrierten Lösung außerhalb der Zelle. Die Zelle verliert Wasser.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 53,
+        "category": "Enzyme",
+        "question": "Warum sinkt die Aktivität vieler menschlicher Enzyme bei sehr hohen Temperaturen stark?",
+        "answers": [
+          "Die Moleküle bewegen sich dann langsamer",
+          "Das Substrat wird grundsätzlich nicht mehr gebildet",
+          "Die Enzyme werden vollständig verbraucht",
+          "Ihre räumliche Struktur und das aktive Zentrum verändern sich"
+        ],
+        "correctIndex": 3,
+        "explanation": "Hohe Temperaturen können Enzyme denaturieren. Das aktive Zentrum passt dann nicht mehr gut zum Substrat.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 54,
+        "category": "Zellatmung",
+        "question": "Welche Aussage über eine lebende grüne Pflanzenzelle trifft zu?",
+        "answers": [
+          "Sie betreibt Zellatmung nur nachts",
+          "Sie betreibt Zellatmung sowohl bei Licht als auch im Dunkeln",
+          "Sie betreibt Zellatmung nur während der Fotosynthese",
+          "Sie benötigt keine Zellatmung, solange sie Chloroplasten besitzt"
+        ],
+        "correctIndex": 1,
+        "explanation": "Zellatmung liefert auch Pflanzen nutzbare Energie und findet tagsüber sowie nachts statt; Fotosynthese benötigt Licht.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 55,
+        "category": "Genetik",
+        "question": "Bei einem dominant-rezessiven Erbgang werden Aa und Aa gekreuzt. Wie wahrscheinlich ist der Genotyp aa bei einem Nachkommen?",
+        "answers": [
+          "50 %",
+          "75 %",
+          "25 %",
+          "0 %"
+        ],
+        "correctIndex": 2,
+        "explanation": "Die Kombinationen sind AA, Aa, Aa und aa. Eine von vier Möglichkeiten ist aa, also 25 %.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 56,
+        "category": "Zellteilung",
+        "question": "Welcher Vorgang halbiert bei der Bildung menschlicher Keimzellen die Zahl der Chromosomen?",
+        "answers": [
+          "Die Mitose",
+          "Die Befruchtung",
+          "Die DNA-Verdopplung",
+          "Die Meiose"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bei der Meiose wird aus einem doppelten ein einfacher Chromosomensatz, damit bei der Befruchtung wieder ein doppelter entstehen kann.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 57,
+        "category": "Blutkreislauf",
+        "question": "Welches Gefäß führt beim Menschen sauerstoffreiches Blut von der Lunge zum Herzen?",
+        "answers": [
+          "Die Lungenvene",
+          "Die Lungenarterie",
+          "Die obere Hohlvene",
+          "Die untere Hohlvene"
+        ],
+        "correctIndex": 0,
+        "explanation": "Die Lungenvenen transportieren sauerstoffreiches Blut von der Lunge zum linken Vorhof des Herzens.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 58,
+        "category": "Ökologie",
+        "question": "Warum gelangt nur ein Teil der Energie einer Nahrungsebene zur nächsten?",
+        "answers": [
+          "Weil Energie bei jeder Zellteilung neu entsteht",
+          "Weil unter anderem Zellatmung Wärme freisetzt und nicht alles gefressen wird",
+          "Weil Räuber keine Zellatmung betreiben",
+          "Weil Pflanzen den größten Teil ihrer Energie aus dem Boden beziehen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Organismen verbrauchen Energie für ihren Stoffwechsel und geben Wärme ab. Außerdem wird nicht die gesamte Biomasse gefressen oder verdaut.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 59,
+        "category": "Evolution",
+        "question": "In einer Bakterienpopulation überleben resistente Varianten eine Antibiotikabehandlung. Warum nimmt ihr Anteil anschließend häufig zu?",
+        "answers": [
+          "Alle überlebenden Bakterien verändern gezielt ihre Gene",
+          "Das Antibiotikum wird von Bakterien in Resistenzgene umgewandelt",
+          "Die überlebenden resistenten Bakterien vermehren sich weiter",
+          "Nichtresistente Bakterien geben ihre Resistenz an resistente ab"
+        ],
+        "correctIndex": 2,
+        "explanation": "Resistente Bakterien überleben häufiger und geben ihre Eigenschaften bei der Vermehrung weiter. So verändert Selektion die Zusammensetzung der Population.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 60,
+        "category": "DNA",
+        "question": "Welcher DNA-Strang ergänzt 5′-AGTC-3′ durch passende Basenpaarung, wenn er antiparallel darunter liegt?",
+        "answers": [
+          "3′-AGTC-5′",
+          "3′-UCAG-5′",
+          "3′-GACT-5′",
+          "3′-TCAG-5′"
+        ],
+        "correctIndex": 3,
+        "explanation": "A paart mit T und G mit C. Die beiden DNA-Stränge verlaufen antiparallel: unter 5′-AGTC-3′ liegt 3′-TCAG-5′.",
+        "difficulty": "schwer"
+      }
+    ]
+  },
+  {
+    "id": "physik",
+    "title": "Physik – Grundlagen",
+    "category": "Naturwissenschaften",
+    "description": "Bewegung, Strom, Wärme und Wellen: Zehn kompakte Aufgaben mit plausiblen Antwortmöglichkeiten.",
+    "questions": [
+      {
+        "id": 61,
+        "category": "Bewegung",
+        "question": "Ein Auto beschleunigt gleichmäßig aus dem Stand mit 2 m/s². Welche Geschwindigkeit erreicht es nach 5 Sekunden?",
+        "answers": [
+          "2,5 m/s",
+          "10 m/s",
+          "25 m/s",
+          "5 m/s"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bei Start aus dem Stand gilt v = a × t: 2 m/s² × 5 s = 10 m/s.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 62,
+        "category": "Kräfte",
+        "question": "Ein Buch liegt ruhig auf einem Tisch. Welche Aussage zur resultierenden Kraft auf das Buch ist richtig?",
+        "answers": [
+          "Sie entspricht der Gewichtskraft nach unten",
+          "Sie entspricht der Stützkraft nach oben",
+          "Sie ist null, weil sich Gewichts- und Stützkraft ausgleichen",
+          "Es wirken überhaupt keine Kräfte auf das Buch"
+        ],
+        "correctIndex": 2,
+        "explanation": "Gewichtskraft nach unten und Stützkraft des Tisches nach oben sind gleich groß. Ihre Summe ist null.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 63,
+        "category": "Energie",
+        "question": "Ein Körper bewegt sich doppelt so schnell wie zuvor. Wie verändert sich seine kinetische Energie bei gleicher Masse?",
+        "answers": [
+          "Sie vervierfacht sich",
+          "Sie verdoppelt sich",
+          "Sie halbiert sich",
+          "Sie bleibt gleich"
+        ],
+        "correctIndex": 0,
+        "explanation": "Die kinetische Energie ist E = 1/2 × m × v². Verdoppelt sich v, wird v² viermal so groß.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 64,
+        "category": "Dichte",
+        "question": "Ein Körper hat eine Masse von 180 g und ein Volumen von 200 cm³. Wie hoch ist seine mittlere Dichte?",
+        "answers": [
+          "1,11 g/cm³",
+          "9 g/cm³",
+          "0,09 g/cm³",
+          "0,9 g/cm³"
+        ],
+        "correctIndex": 3,
+        "explanation": "Die Dichte ist Masse geteilt durch Volumen: 180 g ÷ 200 cm³ = 0,9 g/cm³.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 65,
+        "category": "Elektrizität",
+        "question": "An einem ohmschen Widerstand von 6 Ω liegen 12 V an. Welche Stromstärke fließt?",
+        "answers": [
+          "0,5 A",
+          "2 A",
+          "6 A",
+          "72 A"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nach dem Ohmschen Gesetz gilt I = U/R: 12 V ÷ 6 Ω = 2 A.",
+        "difficulty": "leicht"
+      },
+      {
+        "id": 66,
+        "category": "Schaltungen",
+        "question": "Zwei Widerstände mit je 10 Ω sind parallel geschaltet. Wie groß ist ihr Gesamtwiderstand?",
+        "answers": [
+          "20 Ω",
+          "10 Ω",
+          "5 Ω",
+          "2 Ω"
+        ],
+        "correctIndex": 2,
+        "explanation": "Für zwei gleiche Widerstände parallel halbiert sich der Einzelwiderstand: 10 Ω ÷ 2 = 5 Ω.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 67,
+        "category": "Leistung",
+        "question": "Ein Gerät mit 1.000 W Leistung läuft 30 Minuten lang. Wie viel elektrische Energie benötigt es?",
+        "answers": [
+          "0,5 kWh",
+          "2 kWh",
+          "30 kWh",
+          "500 kWh"
+        ],
+        "correctIndex": 0,
+        "explanation": "1.000 W sind 1 kW und 30 Minuten sind 0,5 Stunden. Energie = 1 kW × 0,5 h = 0,5 kWh.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 68,
+        "category": "Wärmelehre",
+        "question": "Ein Metalllöffel und ein Holzlöffel liegen lange im selben Raum. Warum fühlt sich das Metall meist kälter an?",
+        "answers": [
+          "Metall hat grundsätzlich eine niedrigere Temperatur als Holz",
+          "Holz erzeugt bei Berührung Wärme",
+          "Metall enthält weniger Wärmeenergie pro Gegenstand",
+          "Metall leitet Wärme schneller von der Hand weg"
+        ],
+        "correctIndex": 3,
+        "explanation": "Beide Löffel haben ungefähr Raumtemperatur. Metall entzieht der wärmeren Hand schneller Wärme und fühlt sich deshalb kälter an.",
+        "difficulty": "mittel"
+      },
+      {
+        "id": 69,
+        "category": "Wellen",
+        "question": "Die Frequenz einer Welle wird bei unveränderter Ausbreitungsgeschwindigkeit verdoppelt. Was passiert mit ihrer Wellenlänge?",
+        "answers": [
+          "Sie verdoppelt sich",
+          "Sie halbiert sich",
+          "Sie vervierfacht sich",
+          "Sie bleibt gleich"
+        ],
+        "correctIndex": 1,
+        "explanation": "Es gilt v = f × λ. Bleibt v gleich und verdoppelt sich f, muss sich die Wellenlänge λ halbieren.",
+        "difficulty": "schwer"
+      },
+      {
+        "id": 70,
+        "category": "Druck",
+        "question": "Die gleiche Kraft wirkt einmal auf eine große und einmal auf eine halb so große Fläche. Wie verändert sich der Druck auf der kleineren Fläche?",
+        "answers": [
+          "Er halbiert sich",
+          "Er bleibt gleich",
+          "Er verdoppelt sich",
+          "Er vervierfacht sich"
+        ],
+        "correctIndex": 2,
+        "explanation": "Druck ist Kraft geteilt durch Fläche: p = F/A. Bei gleicher Kraft und halber Fläche wird der Druck doppelt so groß.",
+        "difficulty": "schwer"
+      }
+    ]
+  }
+]
