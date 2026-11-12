@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 export const databasePath = fileURLToPath(new URL('./data/quiz.sqlite', import.meta.url))
 const seedPath = new URL('./seed-quizzes.json', import.meta.url)
 
-// JSON is used only for the first import. Existing databases are never overwritten.
+// Import missing seed entries after a Git update; preserve existing database edits.
 export function openQuizDatabase(path = databasePath) {
   if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true })
   const db = new DatabaseSync(path)
@@ -31,10 +31,10 @@ export function openQuizDatabase(path = databasePath) {
       );
       CREATE INDEX IF NOT EXISTS questions_quiz_id ON questions(quiz_id);
     `)
-    if (db.prepare('SELECT COUNT(*) AS count FROM quizzes').get().count === 0) {
+    {
       const seed = JSON.parse(readFileSync(seedPath, 'utf8').replace(/^\uFEFF/, ''))
-      const insertQuiz = db.prepare('INSERT INTO quizzes VALUES (?, ?, ?, ?, ?)')
-      const insertQuestion = db.prepare('INSERT INTO questions VALUES (?, ?, ?, ?, ?, ?, ?)')
+      const insertQuiz = db.prepare('INSERT INTO quizzes VALUES (?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING')
+      const insertQuestion = db.prepare('INSERT INTO questions VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING')
       db.exec('BEGIN')
       try {
         seed.forEach((quiz, position) => {

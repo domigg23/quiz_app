@@ -7,7 +7,7 @@ import { createServer } from 'node:http'
 import { openQuizDatabase, readQuizzes } from '../server/database.js'
 import { createQuizApi } from '../server/api.js'
 
-test('imports the complete seed once and preserves database edits across restarts', () => {
+test('imports seed and missing entries while preserving database edits across restarts', () => {
   const folder = mkdtempSync(join(tmpdir(), 'quiz-db-'))
   let db
   try {

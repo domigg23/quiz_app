@@ -9,8 +9,8 @@ npm run dev
 ```
 
 Öffne die im Terminal angezeigte Adresse. Ein Befehl startet Vue und die lokale API.
-Beim ersten Serverstart entsteht automatisch server/data/quiz.sqlite mit allen 35 vorhandenen Fragen.
-Weitere Starts behalten die vorhandene Datenbank unverändert bei.
+Beim ersten Serverstart entsteht automatisch server/data/quiz.sqlite mit allen 70 vorhandenen Fragen.
+Weitere Starts ergänzen neue Seed-Einträge, die z. B. über Git dazukommen. Bestehende Datenbankeinträge werden nicht überschrieben.
 
 Produktionsvorschau:
 ```powershell
@@ -27,9 +27,9 @@ Browser → fetch('/api/quizzes') → Node-API → SQLite → JSON → Vue-Oberf
 - server/api.js: GET /api/quizzes liest die Datenbank. Andere Methoden erhalten 405, unbekannte API-Routen 404.
 - server/database.js: legt Tabellen an und liest Quizthemen und Fragen mit SQL.
 - server/data/quiz.sqlite: echte lokale Datenbank mit den Tabellen quizzes und questions.
-- server/seed-quizzes.json: einmaliger Anfangsbestand, keine zur Laufzeit vom Browser geladene Datenquelle.
+- server/seed-quizzes.json: Anfangsbestand und neue Einträge für den Import, keine vom Browser geladene Datenquelle.
 - Datenbank und Seed bleiben auf dem Server. Die lokale Datenbank wird nicht in Git eingecheckt.
-- Änderungen am Seed verändern eine bereits angelegte Datenbank nicht.
+- Neue IDs im Seed werden beim Serverstart ergänzt. Änderungen an vorhandenen IDs überschreiben die Datenbank nicht. Gelöschte Seed-Einträge werden nicht aus der Datenbank entfernt.
 
 ## Fragen bearbeiten
 Öffne server/data/quiz.sqlite mit einem SQLite-Werkzeug (z. B. einer vorhandenen SQLite-Erweiterung).
@@ -38,7 +38,7 @@ correct_index beginnt bei 0. answers_json ist eine JSON-Liste von Antworttexten.
 Nach dem Speichern lädt die Themenauswahl die aktualisierten Daten beim nächsten Seitenaufruf.
 Ein neues Quiz benötigt zuerst einen Eintrag in quizzes und danach passende questions.
 Für den Kollegen wird beim ersten Start der eingecheckte Seed importiert.
-Eigene Datenbankänderungen werden daher nicht automatisch über Git verteilt.
+Eigene Änderungen an bestehenden Datenbankeinträgen werden nicht automatisch über Git verteilt. Neue Fragen mit neuen IDs im Seed können dagegen über Git verteilt werden.
 
 ## Schulanforderungen
 - Master-Detail: Themenliste und ausgewählte Quizdetails in CatalogView.vue.

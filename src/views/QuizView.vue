@@ -111,23 +111,23 @@ onBeforeUnmount(() => { clearTimer(); window.clearTimeout(nextTimer.value) })
 
 <template>
   <section aria-label="Quizrunde">
-      <p v-if="isPractice" class="eyebrow">Wiederholungsrunde</p>
-      <QuizHeader
-        v-if="!finished"
-        :current="currentIndex + 1"
-        :total="questions.length"
-        :score="score"
-        :time-left="timeLeft"
-        :progress="progress"
-      />
+    <p v-if="isPractice" class="eyebrow">Wiederholungsrunde</p>
+    <QuizHeader
+      v-if="!finished"
+      :current="currentIndex + 1"
+      :total="questions.length"
+      :score="score"
+      :time-left="timeLeft"
+      :progress="progress"
+    />
 
-      <QuestionCard
-        v-if="!finished"
-        :question="currentQuestion"
-        :selected-index="selectedIndex"
-        :locked="locked"
-        @answer="chooseAnswer"
-      />
+    <QuestionCard
+      v-if="!finished"
+      :question="currentQuestion"
+      :selected-index="selectedIndex"
+      :locked="locked"
+      @answer="chooseAnswer"
+    />
 
   </section>
 </template>
