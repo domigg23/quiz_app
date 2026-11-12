@@ -15,7 +15,9 @@
           "Argentinien",
           "Spanien"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Deutschland besiegte Argentinien im WM-Finale 2014 mit 1:0 nach Verlängerung. Mario Götze erzielte das Tor.",
+        "difficulty": "leicht"
       },
       {
         "id": 2,
@@ -27,7 +29,9 @@
           "Brasilien",
           "Argentinien"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Lionel Messi wurde in Rosario in Argentinien geboren und spielt für die argentinische Nationalmannschaft.",
+        "difficulty": "leicht"
       },
       {
         "id": 3,
@@ -39,7 +43,9 @@
           "Tennis",
           "Handball"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Pelé war ein brasilianischer Fußballspieler und wurde mit Brasilien dreimal Weltmeister.",
+        "difficulty": "leicht"
       },
       {
         "id": 4,
@@ -51,7 +57,9 @@
           "Barcelona",
           "Valencia"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Der FC Barcelona ist nach seiner Heimatstadt Barcelona in Spanien benannt.",
+        "difficulty": "leicht"
       },
       {
         "id": 5,
@@ -63,7 +71,9 @@
           "Kroatien",
           "Marokko"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Argentinien besiegte Frankreich im Finale 2022 im Elfmeterschießen.",
+        "difficulty": "leicht"
       },
       {
         "id": 21,
@@ -75,7 +85,9 @@
           "Brasilien",
           "Frankreich"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Die erste Fußball-WM der Männer fand 1930 in Uruguay statt. Uruguay gewann auch das Turnier.",
+        "difficulty": "schwer"
       },
       {
         "id": 22,
@@ -87,7 +99,9 @@
           "Frankreich",
           "Tschechien"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Griechenland besiegte Gastgeber Portugal im EM-Finale 2004 mit 1:0.",
+        "difficulty": "schwer"
       },
       {
         "id": 23,
@@ -99,7 +113,9 @@
           "Spanien",
           "Uruguay"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Spanien gewann das Finale 2010 gegen die Niederlande mit 1:0 nach Verlängerung.",
+        "difficulty": "mittel"
       },
       {
         "id": 24,
@@ -111,7 +127,9 @@
           "Dortmund",
           "Berlin"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Das WM-Finale 2006 zwischen Italien und Frankreich wurde im Berliner Olympiastadion gespielt.",
+        "difficulty": "schwer"
       },
       {
         "id": 25,
@@ -123,7 +141,9 @@
           "Schweden",
           "Australien"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Spanien gewann das WM-Finale der Frauen 2023 gegen England mit 1:0.",
+        "difficulty": "schwer"
       }
     ]
   },
@@ -143,7 +163,9 @@
           "Basketball",
           "Tennis"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Michael Jordan wurde vor allem als Basketballspieler der Chicago Bulls bekannt.",
+        "difficulty": "leicht"
       },
       {
         "id": 7,
@@ -155,7 +177,9 @@
           "Badminton",
           "Squash"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Roger Federer ist ein Schweizer Tennisspieler und mehrfacher Grand-Slam-Sieger.",
+        "difficulty": "leicht"
       },
       {
         "id": 8,
@@ -167,7 +191,9 @@
           "Skifahren",
           "Radsport"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Die Tour de France ist ein mehrtägiges Straßenradrennen.",
+        "difficulty": "leicht"
       },
       {
         "id": 9,
@@ -179,7 +205,9 @@
           "Turnen",
           "Segeln"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Michael Phelps gewann seine olympischen Medaillen im Schwimmen.",
+        "difficulty": "leicht"
       },
       {
         "id": 10,
@@ -191,7 +219,9 @@
           "Boxen",
           "Judo"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Muhammad Ali war Boxweltmeister im Schwergewicht.",
+        "difficulty": "leicht"
       },
       {
         "id": 26,
@@ -203,7 +233,9 @@
           "Melbourne",
           "New York"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Wimbledon ist ein Stadtteil von London. Dort findet das traditionsreiche Rasenturnier statt.",
+        "difficulty": "mittel"
       },
       {
         "id": 27,
@@ -215,7 +247,9 @@
           "Chicago Bulls",
           "New York Knicks"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Jordan gewann mit den Chicago Bulls die Titel 1991–1993 und 1996–1998.",
+        "difficulty": "schwer"
       },
       {
         "id": 28,
@@ -227,7 +261,9 @@
           "Zehnkampf",
           "Staffellauf"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Beim Staffellauf wird ein Staffelstab innerhalb einer Wechselzone an die nächste Person übergeben.",
+        "difficulty": "leicht"
       },
       {
         "id": 29,
@@ -239,7 +275,9 @@
           "Blau",
           "Grün"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Das Gelbe Trikot kennzeichnet den Führenden der Gesamtwertung; Grün steht für die Punktewertung.",
+        "difficulty": "mittel"
       },
       {
         "id": 30,
@@ -251,7 +289,9 @@
           "Mit einer Kugel",
           "Mit einem Rugbyball"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Ein Puck ist eine flache, harte Gummischeibe, die über das Eis gespielt wird.",
+        "difficulty": "leicht"
       }
     ]
   },
@@ -271,7 +311,9 @@
           "Paris",
           "London"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Die ersten Olympischen Spiele der Neuzeit fanden 1896 in Athen statt.",
+        "difficulty": "mittel"
       },
       {
         "id": 12,
@@ -283,7 +325,9 @@
           "Sieben",
           "Fünf"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Das olympische Symbol besteht aus fünf miteinander verbundenen Ringen.",
+        "difficulty": "leicht"
       },
       {
         "id": 13,
@@ -295,7 +339,9 @@
           "Kenia",
           "Kanada"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Usain Bolt stammt aus Jamaika und wurde als Sprinter über 100 und 200 Meter bekannt.",
+        "difficulty": "leicht"
       },
       {
         "id": 14,
@@ -307,7 +353,9 @@
           "Skilanglauf und Schießen",
           "Abfahrt und Eishockey"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Biathlon verbindet Ausdauer beim Skilanglauf mit Präzision beim Schießen.",
+        "difficulty": "mittel"
       },
       {
         "id": 15,
@@ -319,7 +367,9 @@
           "Skispringen",
           "Snowboard"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Marcel Hirscher wurde im alpinen Skisport besonders durch Slalom und Riesenslalom bekannt.",
+        "difficulty": "leicht"
       },
       {
         "id": 31,
@@ -331,7 +381,9 @@
           "Sydney",
           "Peking"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Sydney in Australien war Gastgeberin der Olympischen Sommerspiele 2000.",
+        "difficulty": "mittel"
       },
       {
         "id": 32,
@@ -343,7 +395,9 @@
           "Graz",
           "Innsbruck"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Innsbruck richtete die Olympischen Winterspiele sowohl 1964 als auch 1976 aus.",
+        "difficulty": "schwer"
       },
       {
         "id": 33,
@@ -355,7 +409,9 @@
           "Eiskunstlauf",
           "Bobfahren"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Beim Curling gleiten Steine auf dem Eis. Wischen mit Besen beeinflusst ihre Bewegung.",
+        "difficulty": "mittel"
       },
       {
         "id": 34,
@@ -367,7 +423,9 @@
           "Tokio",
           "Athen"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Die Olympischen Sommerspiele 2012 fanden in London statt.",
+        "difficulty": "mittel"
       },
       {
         "id": 35,
@@ -379,7 +437,9 @@
           "Skispringen",
           "Eisschnelllauf"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Beim Skispringen fahren die Athleten eine Schanze hinunter und springen anschließend möglichst weit und kontrolliert.",
+        "difficulty": "leicht"
       }
     ]
   },
@@ -399,7 +459,9 @@
           "60 Euro",
           "75 Euro"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "25 % von 80 Euro sind 20 Euro. Nach dem Rabatt bleiben 80 − 20 = 60 Euro.",
+        "difficulty": "leicht"
       },
       {
         "id": 17,
@@ -411,7 +473,9 @@
           "16 Quadratmeter",
           "30 Quadratmeter"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Die Rechteckfläche ist Länge mal Breite: 5 m × 3 m = 15 m².",
+        "difficulty": "leicht"
       },
       {
         "id": 18,
@@ -423,7 +487,9 @@
           "25.000 Meter",
           "2.500 Meter"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Ein Kilometer hat 1.000 Meter. Deshalb sind 2,5 × 1.000 = 2.500 Meter.",
+        "difficulty": "leicht"
       },
       {
         "id": 19,
@@ -435,7 +501,9 @@
           "7 Punkte",
           "18 Punkte"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Die Summe ist 4 + 6 + 8 = 18. Geteilt durch drei ergibt das 6 Punkte.",
+        "difficulty": "leicht"
       },
       {
         "id": 20,
@@ -447,7 +515,9 @@
           "Ein Viertel",
           "Ein Achtel"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Zwei von acht Stücken sind 2/8. Mit 2 gekürzt ergibt das 1/4.",
+        "difficulty": "leicht"
       },
       {
         "id": 36,
@@ -459,7 +529,9 @@
           "4 % höher",
           "8 % niedriger"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Zum Beispiel werden aus 100 Euro zunächst 120 Euro. 20 % von 120 sind 24: Es bleiben 96 Euro, also 4 % weniger.",
+        "difficulty": "schwer"
       },
       {
         "id": 37,
@@ -471,7 +543,9 @@
           "40 km/h",
           "35 km/h"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Bei 60 km pro Strecke dauert die Hinfahrt 2 Stunden und die Rückfahrt 1 Stunde. 120 km ÷ 3 h = 40 km/h.",
+        "difficulty": "schwer"
       },
       {
         "id": 38,
@@ -483,7 +557,9 @@
           "1/6",
           "1/4"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Pro Wurf sind drei von sechs Zahlen gerade. Bei unabhängigen Würfen gilt 1/2 × 1/2 = 1/4.",
+        "difficulty": "schwer"
       },
       {
         "id": 39,
@@ -495,7 +571,9 @@
           "6 m²",
           "48 m²"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "3 cm entsprechen 6 m und 2 cm entsprechen 4 m. Die Fläche beträgt 6 × 4 = 24 m².",
+        "difficulty": "schwer"
       },
       {
         "id": 40,
@@ -507,7 +585,9 @@
           "19 Punkte",
           "20 Punkte"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Vier Tests mit Durchschnitt 14 ergeben 56 Punkte. Für fünf Tests mit Durchschnitt 15 braucht man 75 Punkte: 75 − 56 = 19.",
+        "difficulty": "schwer"
       }
     ]
   },
@@ -527,7 +607,9 @@
           "1",
           "17"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "In einem neutralen Atom ist die Zahl der negativ geladenen Elektronen gleich der Zahl der positiv geladenen Protonen.",
+        "difficulty": "leicht"
       },
       {
         "id": 42,
@@ -539,7 +621,9 @@
           "Immer in der Elektronenzahl",
           "In der Ladung jedes Protons"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Isotope haben dieselbe Protonenzahl und gehören deshalb zum selben Element; ihre Neutronenzahl ist unterschiedlich.",
+        "difficulty": "mittel"
       },
       {
         "id": 43,
@@ -551,7 +635,9 @@
           "2+",
           "0"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Durch die Abgabe von zwei negativ geladenen Elektronen bleiben zwei positive Ladungen im Überschuss: Mg²⁺.",
+        "difficulty": "mittel"
       },
       {
         "id": 44,
@@ -563,7 +649,9 @@
           "Wasserstoffbrücken zwischen Natrium und Chlor",
           "Die Anziehung elektrisch neutraler Atome"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Kochsalz besteht aus positiv geladenen Natriumionen und negativ geladenen Chloridionen, die sich elektrostatisch anziehen.",
+        "difficulty": "mittel"
       },
       {
         "id": 45,
@@ -575,7 +663,9 @@
           "1 : 2 : 2",
           "2 : 1 : 2"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "2 H₂ + O₂ → 2 H₂O enthält auf beiden Seiten vier Wasserstoffatome und zwei Sauerstoffatome.",
+        "difficulty": "schwer"
       },
       {
         "id": 46,
@@ -587,7 +677,9 @@
           "11,1 %",
           "90 %"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Die Lösung wiegt 10 + 90 = 100 g. Der Salzanteil ist 10/100 = 0,10 = 10 %.",
+        "difficulty": "leicht"
       },
       {
         "id": 47,
@@ -599,7 +691,9 @@
           "Durch Verdampfen des Wassers",
           "Durch Abgießen der oberen Flüssigkeit"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Wasser kann verdampfen, während das gelöste Salz als Feststoff zurückbleibt.",
+        "difficulty": "leicht"
       },
       {
         "id": 48,
@@ -611,7 +705,9 @@
           "Er verschiebt das Gleichgewicht vollständig zu den Produkten",
           "Er wird dabei dauerhaft als zusätzlicher Ausgangsstoff verbraucht"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Ein Katalysator bietet einen alternativen Reaktionsweg mit geringerer Aktivierungsenergie und wird dabei insgesamt nicht verbraucht.",
+        "difficulty": "schwer"
       },
       {
         "id": 49,
@@ -623,7 +719,9 @@
           "Sie sinkt, weil Energie frei wird",
           "Sie bleibt bei einer gewöhnlichen chemischen Betrachtung gleich"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Im geschlossenen Gefäß bleibt auch das gebildete Gas enthalten. Bei einer chemischen Reaktion bleibt die Gesamtmasse praktisch erhalten.",
+        "difficulty": "mittel"
       },
       {
         "id": 50,
@@ -635,7 +733,9 @@
           "Es nimmt zwei Protonen auf und wird oxidiert",
           "Es gibt zwei Neutronen ab und wird reduziert"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Fe → Fe²⁺ + 2 e⁻. Die Abgabe von Elektronen heißt Oxidation.",
+        "difficulty": "schwer"
       }
     ]
   },
@@ -655,7 +755,9 @@
           "Ribosomen",
           "Mitochondrien"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Ribosomen stellen Proteine her und kommen sowohl in Bakterien als auch in menschlichen Zellen vor.",
+        "difficulty": "leicht"
       },
       {
         "id": 52,
@@ -667,7 +769,9 @@
           "Es bleibt wegen der Zellwand vollständig in der Zelle",
           "Es wird in der Zelle zu Salz umgewandelt"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Durch Osmose wandert Wasser überwiegend zur stärker konzentrierten Lösung außerhalb der Zelle. Die Zelle verliert Wasser.",
+        "difficulty": "mittel"
       },
       {
         "id": 53,
@@ -679,7 +783,9 @@
           "Die Enzyme werden vollständig verbraucht",
           "Ihre räumliche Struktur und das aktive Zentrum verändern sich"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Hohe Temperaturen können Enzyme denaturieren. Das aktive Zentrum passt dann nicht mehr gut zum Substrat.",
+        "difficulty": "schwer"
       },
       {
         "id": 54,
@@ -691,7 +797,9 @@
           "Sie betreibt Zellatmung nur während der Fotosynthese",
           "Sie benötigt keine Zellatmung, solange sie Chloroplasten besitzt"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Zellatmung liefert auch Pflanzen nutzbare Energie und findet tagsüber sowie nachts statt; Fotosynthese benötigt Licht.",
+        "difficulty": "leicht"
       },
       {
         "id": 55,
@@ -703,7 +811,9 @@
           "25 %",
           "0 %"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Die Kombinationen sind AA, Aa, Aa und aa. Eine von vier Möglichkeiten ist aa, also 25 %.",
+        "difficulty": "schwer"
       },
       {
         "id": 56,
@@ -715,7 +825,9 @@
           "Die DNA-Verdopplung",
           "Die Meiose"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Bei der Meiose wird aus einem doppelten ein einfacher Chromosomensatz, damit bei der Befruchtung wieder ein doppelter entstehen kann.",
+        "difficulty": "schwer"
       },
       {
         "id": 57,
@@ -727,7 +839,9 @@
           "Die obere Hohlvene",
           "Die untere Hohlvene"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Die Lungenvenen transportieren sauerstoffreiches Blut von der Lunge zum linken Vorhof des Herzens.",
+        "difficulty": "mittel"
       },
       {
         "id": 58,
@@ -739,7 +853,9 @@
           "Weil Räuber keine Zellatmung betreiben",
           "Weil Pflanzen den größten Teil ihrer Energie aus dem Boden beziehen"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Organismen verbrauchen Energie für ihren Stoffwechsel und geben Wärme ab. Außerdem wird nicht die gesamte Biomasse gefressen oder verdaut.",
+        "difficulty": "schwer"
       },
       {
         "id": 59,
@@ -751,7 +867,9 @@
           "Die überlebenden resistenten Bakterien vermehren sich weiter",
           "Nichtresistente Bakterien geben ihre Resistenz an resistente ab"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Resistente Bakterien überleben häufiger und geben ihre Eigenschaften bei der Vermehrung weiter. So verändert Selektion die Zusammensetzung der Population.",
+        "difficulty": "schwer"
       },
       {
         "id": 60,
@@ -763,7 +881,9 @@
           "3′-GACT-5′",
           "3′-TCAG-5′"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "A paart mit T und G mit C. Die beiden DNA-Stränge verlaufen antiparallel: unter 5′-AGTC-3′ liegt 3′-TCAG-5′.",
+        "difficulty": "schwer"
       }
     ]
   },
@@ -783,7 +903,9 @@
           "25 m/s",
           "5 m/s"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Bei Start aus dem Stand gilt v = a × t: 2 m/s² × 5 s = 10 m/s.",
+        "difficulty": "leicht"
       },
       {
         "id": 62,
@@ -795,7 +917,9 @@
           "Sie ist null, weil sich Gewichts- und Stützkraft ausgleichen",
           "Es wirken überhaupt keine Kräfte auf das Buch"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Gewichtskraft nach unten und Stützkraft des Tisches nach oben sind gleich groß. Ihre Summe ist null.",
+        "difficulty": "mittel"
       },
       {
         "id": 63,
@@ -807,7 +931,9 @@
           "Sie halbiert sich",
           "Sie bleibt gleich"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "Die kinetische Energie ist E = 1/2 × m × v². Verdoppelt sich v, wird v² viermal so groß.",
+        "difficulty": "schwer"
       },
       {
         "id": 64,
@@ -819,7 +945,9 @@
           "0,09 g/cm³",
           "0,9 g/cm³"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Die Dichte ist Masse geteilt durch Volumen: 180 g ÷ 200 cm³ = 0,9 g/cm³.",
+        "difficulty": "leicht"
       },
       {
         "id": 65,
@@ -831,7 +959,9 @@
           "6 A",
           "72 A"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Nach dem Ohmschen Gesetz gilt I = U/R: 12 V ÷ 6 Ω = 2 A.",
+        "difficulty": "leicht"
       },
       {
         "id": 66,
@@ -843,7 +973,9 @@
           "5 Ω",
           "2 Ω"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Für zwei gleiche Widerstände parallel halbiert sich der Einzelwiderstand: 10 Ω ÷ 2 = 5 Ω.",
+        "difficulty": "schwer"
       },
       {
         "id": 67,
@@ -855,7 +987,9 @@
           "30 kWh",
           "500 kWh"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "1.000 W sind 1 kW und 30 Minuten sind 0,5 Stunden. Energie = 1 kW × 0,5 h = 0,5 kWh.",
+        "difficulty": "schwer"
       },
       {
         "id": 68,
@@ -867,7 +1001,9 @@
           "Metall enthält weniger Wärmeenergie pro Gegenstand",
           "Metall leitet Wärme schneller von der Hand weg"
         ],
-        "correctIndex": 3
+        "correctIndex": 3,
+        "explanation": "Beide Löffel haben ungefähr Raumtemperatur. Metall entzieht der wärmeren Hand schneller Wärme und fühlt sich deshalb kälter an.",
+        "difficulty": "mittel"
       },
       {
         "id": 69,
@@ -879,7 +1015,9 @@
           "Sie vervierfacht sich",
           "Sie bleibt gleich"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "explanation": "Es gilt v = f × λ. Bleibt v gleich und verdoppelt sich f, muss sich die Wellenlänge λ halbieren.",
+        "difficulty": "schwer"
       },
       {
         "id": 70,
@@ -891,7 +1029,9 @@
           "Er verdoppelt sich",
           "Er vervierfacht sich"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "explanation": "Druck ist Kraft geteilt durch Fläche: p = F/A. Bei gleicher Kraft und halber Fläche wird der Druck doppelt so groß.",
+        "difficulty": "schwer"
       }
     ]
   }

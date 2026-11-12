@@ -5,6 +5,6 @@ import { quizApiPlugin } from './server/api.js'
 export default defineConfig({
   plugins: [vue(), quizApiPlugin()],
   server: {
-    fs: { deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/server/**', '**/tests/**'] }
+    fs: { deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/server/**', '**/tests/**', '**/src/data/**'] }
   }
 })

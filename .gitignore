@@ -7,3 +7,6 @@ dist/
 # Local SQLite database (automatically created from the seed)
 server/data/*.sqlite
 server/data/*.sqlite-*
+
+# Local editor access key
+server/data/editor-key.txt
