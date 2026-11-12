@@ -1,33 +1,64 @@
-# QuizWerk – Vue-Teamprojekt
+# Quiz – Vue-Teamprojekt mit SQLite
 
 ## Starten
+Voraussetzung: Node.js ab 24.14 (auf diesem Rechner installiert).
+
 ```powershell
 npm ci
 npm run dev
 ```
-Produktionsbuild: `npm run build`; Vorschau: `npm run preview`.
+
+Öffne die im Terminal angezeigte Adresse. Ein Befehl startet Vue und die lokale API.
+Beim ersten Serverstart entsteht automatisch server/data/quiz.sqlite mit allen 35 vorhandenen Fragen.
+Weitere Starts behalten die vorhandene Datenbank unverändert bei.
+
+Produktionsvorschau:
+```powershell
+npm run build
+npm run preview
+```
+Auch die Vorschau stellt die API bereit. Nur den dist-Ordner auf statisches Hosting
+zu kopieren reicht nicht: Die Datenbank-API benötigt einen laufenden Node-Server.
+
+## Datenfluss
+Browser → fetch('/api/quizzes') → Node-API → SQLite → JSON → Vue-Oberfläche.
+
+- src/stores/quiz.js: lädt die API mit fetch; reactive verwaltet Daten, Ladezustand und Fehler.
+- server/api.js: GET /api/quizzes liest die Datenbank. Andere Methoden erhalten 405, unbekannte API-Routen 404.
+- server/database.js: legt Tabellen an und liest Quizthemen und Fragen mit SQL.
+- server/data/quiz.sqlite: echte lokale Datenbank mit den Tabellen quizzes und questions.
+- server/seed-quizzes.json: einmaliger Anfangsbestand, keine zur Laufzeit vom Browser geladene Datenquelle.
+- Datenbank und Seed bleiben auf dem Server. Die lokale Datenbank wird nicht in Git eingecheckt.
+- Änderungen am Seed verändern eine bereits angelegte Datenbank nicht.
+
+## Fragen bearbeiten
+Öffne server/data/quiz.sqlite mit einem SQLite-Werkzeug (z. B. einer vorhandenen SQLite-Erweiterung).
+In questions stehen Frage, Kategorie, quiz_id, answers_json und correct_index.
+correct_index beginnt bei 0. answers_json ist eine JSON-Liste von Antworttexten.
+Nach dem Speichern lädt die Themenauswahl die aktualisierten Daten beim nächsten Seitenaufruf.
+Ein neues Quiz benötigt zuerst einen Eintrag in quizzes und danach passende questions.
+Für den Kollegen wird beim ersten Start der eingecheckte Seed importiert.
+Eigene Datenbankänderungen werden daher nicht automatisch über Git verteilt.
 
 ## Schulanforderungen
-- Master-Detail: src/views/CatalogView.vue zeigt links Themen, rechts das ausgewählte Quiz.
-- ref: selectedId im Store und Werte für Timer/Punkte in QuizView.vue.
-- reactive: catalog für Daten/Ladezustand und session für das Ergebnis.
-- fetch: src/stores/quiz.js lädt public/data/quizzes.json mit Status- und Datenprüfung.
-- Vue Router: /, /quiz/:id und /ergebnis; Hash-Routing unterstützt statisches Hosting.
-- Quiz: 20 Sekunden pro Frage, Punkte, Ergebnis und Bestwert je Quiz in localStorage.
-- Zurücknavigieren beendet Timer und den verzögerten Fragenwechsel. Neuladen der Ergebnisroute zeigt einen Hinweis, da laufende Ergebnisse nur im Arbeitsspeicher liegen.
+- Master-Detail: Themenliste und ausgewählte Quizdetails in CatalogView.vue.
+- ref und reactive: Themenauswahl, Quizlogik und Datenzustand.
+- fetch: Fragen aus einer SQLite-Datenbank über eine HTTP-API laden.
+- Vue Router: /, /quiz/:id und /ergebnis.
+- Timer, Punkte, Bestwert je Quiz und Wiederholungsrunde für offene Fragen.
 
-## Zusammenarbeit
-Siehe AUFGABEN.md und KOLLEGE-PROMPT.md. Grundgerüst ist funktionsfähig; der Kollege erweitert die Oberfläche und Inhalte auf eigenem Branch. GitHub-Zugang des Kollegen im Repository unter Settings > Collaborators einladen.
-
-## GitHub hochladen
-GitHub CLI ist installiert, aber beim Erstellen nicht angemeldet. Anmeldung selbst durchführen:
+## Prüfen
 ```powershell
-gh auth login
+npm test
+npm run build
 ```
-Danach im Projektordner ausführen (erstellt ein privates Repository):
-```powershell
-gh repo create holzmann-quiz --private --source=. --remote=origin --push
-```
-Wenn das Repository schon existiert, stattdessen dessen URL als origin verwenden und git push -u origin main ausführen. Keine Tokens in Projektdateien speichern.
+Die Tests prüfen vollständigen Erstimport, Persistenz nach Neustart,
+Datenbankänderungen im HTTP-Ergebnis sowie Fehlerstatus der API.
+Die Tests verwenden temporäre Datenbanken.
 
-Offizielle Grundlagen: https://vuejs.org/guide/essentials/reactivity-fundamentals.html und https://router.vuejs.org/guide/essentials/history-mode.html
+SQLite-Dokumentation: https://nodejs.org/download/release/latest-v24.x/docs/api/sqlite.html
+Repository: https://github.com/domigg23/quiz_app
+
+## Aufgabenteilung
+Du: Datenbank, API, fetch, Routing, Quizlogik und Timer.
+Nolf: Themenauswahl, Suche, Filter, Komponenten, Design und Frageninhalte.

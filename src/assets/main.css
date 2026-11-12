@@ -36,30 +36,6 @@ button:focus-visible {
   padding: 32px 20px;
 }
 
-.background-orb {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(16px);
-  opacity: 0.35;
-  pointer-events: none;
-}
-
-.orb-one {
-  width: 280px;
-  height: 280px;
-  background: #4f46e5;
-  top: -100px;
-  right: -60px;
-}
-
-.orb-two {
-  width: 220px;
-  height: 220px;
-  background: #0891b2;
-  bottom: -80px;
-  left: -50px;
-}
-
 .quiz-layout {
   position: relative;
   z-index: 1;
@@ -345,10 +321,6 @@ button, input, select { font: inherit; }
 .secondary-link { padding: 12px; text-underline-offset: 4px; }
 .result-topic { text-align: center; color: #cbd5e1; font-weight: 700; }
 footer { color: #a5b4c9; }
-/* QuizView retains its owner's markup; avoid a second full-height shell. */
-.app-shell .app-shell { min-height: auto; padding: 0; background: transparent; overflow: visible; }
-.app-shell .app-shell .background-orb { display: none; }
-.app-shell .app-shell footer:empty { display: none; }
 @media (max-width: 650px) {
   .catalog-filters, .master-detail { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }

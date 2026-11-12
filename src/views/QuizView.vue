@@ -3,7 +3,6 @@ import { computed, onBeforeUnmount, ref } from 'vue'
 import QuizHeader from '../components/QuizHeader.vue'
 import QuestionCard from '../components/QuestionCard.vue'
 
-
 import { useRoute, useRouter } from 'vue-router'
 import { catalog, session } from '../stores/quiz'
 const route = useRoute()
@@ -111,11 +110,7 @@ onBeforeUnmount(() => { clearTimer(); window.clearTimeout(nextTimer.value) })
 </script>
 
 <template>
-  <main class="app-shell">
-    <div class="background-orb orb-one"></div>
-    <div class="background-orb orb-two"></div>
-
-    <div class="quiz-layout">
+  <section aria-label="Quizrunde">
       <p v-if="isPractice" class="eyebrow">Wiederholungsrunde</p>
       <QuizHeader
         v-if="!finished"
@@ -134,9 +129,5 @@ onBeforeUnmount(() => { clearTimer(); window.clearTimeout(nextTimer.value) })
         @answer="chooseAnswer"
       />
 
-</div>
-  </main>
+  </section>
 </template>
-
-
-

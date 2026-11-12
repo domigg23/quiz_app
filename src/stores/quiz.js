@@ -6,7 +6,7 @@ export async function loadQuizzes() {
   catalog.loading = true
   catalog.error = ''
   try {
-    const response = await fetch(`${import.meta.env.BASE_URL}data/quizzes.json`)
+    const response = await fetch('/api/quizzes')
     if (!response.ok) throw new Error(`HTTP ${response.status}`)
     const data = await response.json()
     if (!Array.isArray(data) || !data.length || data.some(q => !q.id || !q.title || !Array.isArray(q.questions) || !q.questions.length || q.questions.some(x => !x.question || !Array.isArray(x.answers) || x.answers.length < 2 || !Number.isInteger(x.correctIndex) || x.correctIndex < 0 || x.correctIndex >= x.answers.length))) throw new Error('Ungültige Quizdaten')
