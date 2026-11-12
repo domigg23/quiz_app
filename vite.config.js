@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { quizApiPlugin } from './server/api.js'
 
 export default defineConfig({
-  plugins: [vue(), quizApiPlugin()],
-  server: {
-    fs: { deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/server/**', '**/tests/**', '**/src/data/**'] }
-  }
+  plugins:[vue()],
+  server:{
+    proxy:{'/api':{target:'http://127.0.0.1:3001'}},
+    fs:{deny:['.env','.env.*','*.{crt,pem}','**/.git/**','**/server/**','**/tests/**','**/src/data/**']}
+  },
+  preview:{proxy:{'/api':{target:'http://127.0.0.1:3001'}}}
 })

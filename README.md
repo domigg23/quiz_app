@@ -1,101 +1,126 @@
-# Quiz – Vue-Teamprojekt mit SQLite
+# Quiz – Client, Server und MySQL
 
-## Starten
-Node.js ab 24.14 ist erforderlich.
+## Aufbau
+Die App hat drei getrennte Schichten:
+
+1. Client: Vue im Browser (im Entwicklungsbetrieb Vite auf Port 5173).
+2. Server: eigenständiger Node-HTTP-Server auf Port 3001.
+3. Datenbank: vorhandener MySQL-Server auf Port 3306, Datenbank quiz_app.
+
+Browser → fetch('/api/...') → Vue-Entwicklungsproxy → Node-API → MySQL.
+Nur Node kennt die Zugangsdaten und führt SQL-Abfragen aus.
+MySQL ist keine öffentliche Browser-Schnittstelle.
+Im Produktivmodus liefert Node auch die gebaute Vue-App aus; der Entwicklungsproxy entfällt.
+
+## Einrichten
+Voraussetzungen: Node.js ab 24.14 und ein laufender MySQL-Server 8.
 ```powershell
 npm ci
+Copy-Item server/.env.example server/.env
+```
+Wenn server/.env bereits eingerichtet ist, nicht überschreiben.
+Trage deine MySQL-Zugangsdaten in server/.env ein:
+DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME.
+Standard: 127.0.0.1, 3306, quiz_app als Datenbankname.
+Passwörter gehören nur in die lokale .env und nicht nach GitHub.
+Für Datenbankinitialisierung und Tests benötigt der konfigurierte Benutzer passende CREATE-Rechte.
+
+## Starten
+```powershell
 npm run dev
 ```
-Öffne die angezeigte lokale Adresse. Ein Befehl startet Vue und die Node-API.
-Die SQLite-Datenbank server/data/quiz.sqlite wird automatisch erstellt.
-Beim ersten Start werden die 70 mitgelieferten Fragen importiert. Fehlende Seed-IDs werden bei weiteren Starts ergänzt.
-Vorhandene Fragen bleiben erhalten; bei der Migration werden fehlende Erklärungen und Schwierigkeitsstufen nachgetragen.
+Startet zwei getrennte Node-Prozesse: API und Vue-Entwicklungsserver.
+Öffne die im Terminal angezeigte Vue-Adresse. Ist 5173 belegt, zeigt Vite den nächsten freien Port.
+Strg+C beendet beide Prozesse.
+Falls der Server nicht starten kann: MySQL-Dienst, Port und server/.env prüfen.
 
-Produktionsvorschau:
+Alternativ zwei Terminals:
+```powershell
+npm run dev:server
+npm run dev:client
+```
+
+Produktionsbetrieb:
 ```powershell
 npm run build
-npm run preview
+npm start
 ```
-Auch die Vorschau enthält die API. Ein rein statischer Upload des dist-Ordners genügt nicht.
+Öffne http://127.0.0.1:3001.
+Hier läuft nur der Node-Server, der sowohl dist als auch die API bereitstellt.
+Die Datenbank muss ebenfalls laufen. Ein statischer Upload von dist allein reicht nicht.
+
+## Tabellen und Fragenimport
+- quizzes: Themen, Beschreibungen und Reihenfolge.
+- questions: Fragen, Antworten, richtige Antwort, Erklärung und Schwierigkeit.
+- rounds: gemischte Quizrunden, abgegebene Antworten und Ergebnisse.
+
+server/database.js legt die MySQL-Tabellen an und importiert fehlende Fragen aus server/seed-quizzes.json.
+Der Seed enthält 70 Fragen. Vorhandene MySQL-Einträge werden nicht überschrieben.
+MySQL speichert Daten im Datenverzeichnis seines Dienstes, nicht als Datei im Git-Projekt.
 
 ## Funktionen
 - Master-Detail-Auswahl mit Suche und Kategorienfilter.
-- Schwierigkeit: Leicht, Mittel, Schwer oder alle Stufen. Die Fragenanzahl zeigt die aktuelle Auswahl.
-- Der Server mischt Fragen und Antwortmöglichkeiten für jede neue Runde.
-- 20 Sekunden pro Frage; die API prüft das Zeitlimit und die Antwort.
-- Nach jeder Antwort erscheinen richtige Lösung und Erklärung. Mit „Nächste Frage“ geht es weiter.
-- „Offene Fragen wiederholen“ startet eine neue Zufallsrunde nur mit den vom Server festgestellten Fehlern.
-- Bestwerte werden pro Thema, Schwierigkeit und Fragenanzahl im Browser gespeichert.
-- „Letztes Ergebnis“ bleibt nach einem Neuladen verfügbar. Die Runde liegt dauerhaft in SQLite; der Browser merkt sich die letzte Ergebnis-ID und Darstellung.
-- Der Frageneditor erstellt und bearbeitet Fragen einschließlich Antworten, Erklärung und Schwierigkeit.
+- Schwierigkeit: Leicht, Mittel, Schwer oder alle Stufen.
+- Fragen und Antworten werden für neue Runden gemischt.
+- Antwortprüfung und Zeitlimit von 20 Sekunden auf dem Server.
+- Richtige Lösung und Erklärung erst nach der Abgabe.
+- „Nächste Frage“ lässt Zeit zum Lesen.
+- Wiederholungsrunde für falsche oder unbeantwortete Fragen.
+- Gespeichertes letztes Ergebnis und Bestwerte.
 
-## Frageneditor
-Öffne den Navigationspunkt „Frageneditor“ auf dem Server-Rechner.
-Öffne server/data/editor-key.txt und kopiere den enthaltenen Schlüssel in das Zugangsfeld.
-Die Datei entsteht beim Serverstart, gehört nicht ins Git-Repository und wird nicht im Browser ausgeliefert.
-Der Editor ist nur über die lokale Loopback-Verbindung und mit passendem Schlüssel nutzbar.
-Mit QUIZ_EDITOR_KEY kann vor dem Serverstart ein eigener Schlüssel gesetzt werden.
-Zum Anlegen oder Bearbeiten: Thema wählen, vier verschiedene Antworten eingeben,
-richtige Antwort markieren, Erklärung schreiben und speichern.
-Änderungen gelten für neue Runden. Bereits laufende Runden verwenden einen unveränderten Snapshot.
-Editorfragen liegen in der lokalen Datenbank und werden nicht automatisch auf GitHub hochgeladen.
-Neue Editor-IDs beginnen ab 100000, damit spätere Seed-Importe nicht kollidieren.
+## Fragen verwalten
+Fragen werden direkt in MySQL bearbeitet, zum Beispiel mit MySQL Workbench.
+Die Tabelle questions enthält question, answers_json, correct_index, explanation und difficulty.
+correct_index beginnt bei 0; answers_json ist eine JSON-Liste mit Antworttexten.
+Neue Fragen benötigen eine gültige quiz_id. Die id kann MySQL automatisch vergeben.
+Änderungen gelten für neue Quizrunden. Laufende Runden behalten ihren Snapshot.
+Der Seed bleibt für die Ersteinrichtung und das Ergänzen fehlender IDs erhalten.
+Eigene MySQL-Änderungen werden nicht automatisch über Git verteilt.
 
-## Datenfluss und Dateien
-Browser → fetch → Node-API → SQLite → JSON → reaktive Vue-Oberfläche.
-
-- src/main.js / App.vue: Einstieg, Navigation und RouterView.
-- src/views/CatalogView.vue: Master-Detail, Suche und Schwierigkeitsauswahl.
-- src/views/QuizView.vue: Rundenstart, Timeranzeige, Antwortabgabe und nächster Schritt.
-- src/components/QuestionCard.vue: Antworten und vom Server gelieferte Erklärung.
-- src/views/ResultView.vue: gespeichertes Ergebnis vom Server laden und Wiederholung starten.
-- src/views/EditorView.vue: geschützter Frageneditor.
-- src/stores/quiz.js: reactive-Katalog, Ergebniszustand und Browserspeicherung.
-- src/api.js: gemeinsame fetch-Funktion mit Fehlerbehandlung.
-- server/api.js: API, zufällige Runden, Auswertung und Editorzugriff.
-- server/database.js: Schema, Migrationen, SQL-Lese- und Schreibzugriffe.
-- server/seed-quizzes.json: mitgelieferter Importbestand einschließlich Erklärungen und Schwierigkeit.
-- server/data/quiz.sqlite: lokale Datenbank; nicht in Git.
-- tests/database.test.js: API-, Migrations- und Persistenztests.
-
-Die Tabellen quizzes und questions speichern Inhalte.
-rounds speichert die zufällig zusammengestellten Runden samt Antworten und Ergebnissen.
-Die normale API liefert vor der Abgabe weder correctIndex noch explanation.
-Nach der Abgabe wird nur die gerade beantwortete Frage aufgelöst.
-Bewertung und Punktestand werden auf dem Server ermittelt.
-Runden-IDs sind zufällige UUIDs und dienen als Zugriffsschlüssel für eine Runde.
-Dies ist eine lokale Lern-App ohne Benutzerkonten; der Editor ist keine öffentliche Benutzerverwaltung.
+## Wichtige Dateien
+- src/: Vue-Client, Views, Komponenten, Router, ref/reactive.
+- src/api.js: fetch-Helfer.
+- src/stores/quiz.js: Katalog und Ergebniszustand.
+- server/index.js: eigenständiger HTTP-Server, Konfiguration und statische Dateien.
+- server/api.js: Endpunkte und Quizlogik.
+- server/database.js: asynchrone MySQL-Abfragen über mysql2.
+- server/seed-quizzes.json: mitgelieferter Fragenbestand.
+- server/.env.example: Konfigurationsvorlage ohne Zugangsdaten.
+- scripts/dev.js: startet Client und Server als getrennte Prozesse.
+- vite.config.js: Vue und API-Weiterleitung an Port 3001.
 
 ## API
-- GET /api/quizzes: Themen und Frage-IDs mit Schwierigkeit, ohne Lösungen.
-- POST /api/runs: neue zufällige Runde mit quizId, difficulty und optional sourceRunId.
-- GET /api/runs/:id: aktueller Rundenstand ohne vorzeitig aufgelöste Antworten.
-- POST /api/runs/:id/answer: questionId und answerIndex; null bedeutet unbeantwortet.
-- POST /api/runs/:id/next: questionId; nach einer Antwort weiter oder abschließen.
-- GET /api/runs/:id/result: Ergebnis einer abgeschlossenen Runde.
-- GET /api/editor/questions: vollständiger Fragenbestand, nur mit lokalem Editorzugang.
-- POST /api/editor/questions: neue Frage.
-- PUT /api/editor/questions/:id: Frage bearbeiten.
+GET /api/quizzes: Themen und Frage-IDs, ohne Lösungen.
+POST /api/runs: Runde erstellen.
+GET /api/runs/:id: aktuellen Stand lesen.
+POST /api/runs/:id/answer: Antwort abgeben.
+POST /api/runs/:id/next: weiter oder abschließen.
+GET /api/runs/:id/result: abgeschlossenes Ergebnis.
 
-## Schulanforderungen
-- Master-Detail: Themenliste und Details.
-- ref: Auswahl, Suche und Timer. reactive: Katalog, Ergebnis und Editorformular.
-- fetch: Datenbankinhalte über eine HTTP-API lesen und Antworten/Editoränderungen senden.
-- Vue Router: /, /quiz/:id, /ergebnis und /frageneditor.
-- Query-Parameter: schwierigkeit und modus=wiederholen.
+## Zuverlässigkeit
+SQL-Werte werden als Parameter übergeben.
+InnoDB-Transaktionen und SELECT FOR UPDATE sperren eine Runde während der Auswertung.
+So verändern gleichzeitige Anfragen nicht gegenseitig den Punktestand.
+Frage-IDs werden von MySQL mit AUTO_INCREMENT vergeben.
+Runden sind über zufällige UUIDs erreichbar. Die App hat keine öffentliche Benutzerverwaltung.
 
-## Prüfen
+## Testen
 ```powershell
 npm test
 npm run build
 ```
-Tests prüfen Migration alter Datenbanken, Persistenz, Lösungsverbergung,
-Serverwertung, Zeitüberschreitung, doppelte Anfragen, Wiederholung und Editorvalidierung.
-QUIZ_DB_PATH kann für Tests auf eine getrennte SQLite-Datei zeigen.
+Die Integrationstests benötigen den MySQL-Zugang aus server/.env.
+Sie erstellen getrennte Datenbanken mit zufälligen Namen quiz_app_test_* und entfernen nur diese wieder.
+Die Anwendungsdatenbank quiz_app wird von Tests nicht gelöscht.
 
-## Aufgabenteilung
-Du: Datenbank, API, fetch, Routing, Quizlogik und Timer.
-Nolf: Themenauswahl, Suche, Filter, Komponenten, Design und Frageninhalte.
-Neue Erweiterungen wurden auf Basis des gemeinsamen Projekts ergänzt.
+## Schulanforderungen
+Master-Detail: Themenliste und Details.
+ref/reactive: Auswahl, Timer, Katalog, Ergebnis.
+fetch: Daten lesen, Antworten abgeben.
+Vue Router: /, /quiz/:id, /ergebnis.
 
 Repository: https://github.com/domigg23/quiz_app
+
+Technische Grundlagen:
+- https://sidorares.github.io/node-mysql2/docs/documentation/promise-wrapper
+- https://dev.mysql.com/doc/refman/8.0/en/innodb-locks-set.html

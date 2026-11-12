@@ -2,7 +2,6 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import CatalogView from './views/CatalogView.vue'
 import QuizView from './views/QuizView.vue'
 import ResultView from './views/ResultView.vue'
-import EditorView from './views/EditorView.vue'
 import { catalog, loadQuizzes } from './stores/quiz'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -13,7 +12,6 @@ const router = createRouter({
       if (!catalog.quizzes.some(q => q.id === to.params.id)) return '/'
     } },
     { path: '/ergebnis', component: ResultView },
-    { path: '/frageneditor', component: EditorView },
     { path: '/:pathMatch(.*)*', redirect: '/' }
   ]
 })

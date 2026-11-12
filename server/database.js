@@ -1,99 +1,83 @@
-import { DatabaseSync } from 'node:sqlite'
-import { mkdirSync, readFileSync } from 'node:fs'
-import { dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import mysql from 'mysql2/promise'
+import { readFileSync } from 'node:fs'
+export const difficulties=['leicht','mittel','schwer']
+const json=value=>typeof value==='string'?JSON.parse(value):value
 
-export const databasePath = fileURLToPath(new URL('./data/quiz.sqlite', import.meta.url))
-export const difficulties = ['leicht', 'mittel', 'schwer']
-
-export function openQuizDatabase(path = process.env.QUIZ_DB_PATH || databasePath) {
-  if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true })
-  const db = new DatabaseSync(path)
+export async function openQuizDatabase({ databaseName=process.env.DB_NAME || 'quiz_app' }={}) {
+  if (!/^[a-zA-Z0-9_]{1,64}$/.test(databaseName)) throw new Error('DB_NAME darf nur Buchstaben, Zahlen und Unterstriche enthalten.')
+  const config={host:process.env.DB_HOST||'127.0.0.1',port:Number(process.env.DB_PORT||3306),
+    user:process.env.DB_USER||'quiz_user',password:process.env.DB_PASSWORD||'',
+    charset:'utf8mb4',supportBigNumbers:true,bigNumberStrings:false}
+  const connection=await mysql.createConnection(config)
+  try { await connection.query(`CREATE DATABASE IF NOT EXISTS \`${databaseName}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci`) }
+  finally { await connection.end() }
+  const pool=mysql.createPool({...config,database:databaseName,connectionLimit:10})
   try {
-    db.exec(`
-      PRAGMA foreign_keys = ON;
-      CREATE TABLE IF NOT EXISTS quizzes (
-        id TEXT PRIMARY KEY, title TEXT NOT NULL, category TEXT NOT NULL,
-        description TEXT NOT NULL, position INTEGER NOT NULL
-      );
-      CREATE TABLE IF NOT EXISTS questions (
-        id INTEGER PRIMARY KEY,
-        quiz_id TEXT NOT NULL REFERENCES quizzes(id) ON DELETE CASCADE,
-        category TEXT NOT NULL, question TEXT NOT NULL, answers_json TEXT NOT NULL,
-        correct_index INTEGER NOT NULL, position INTEGER NOT NULL,
-        explanation TEXT NOT NULL DEFAULT '', difficulty TEXT NOT NULL DEFAULT 'mittel'
-      );
-      CREATE INDEX IF NOT EXISTS questions_quiz_id ON questions(quiz_id);
-      CREATE TABLE IF NOT EXISTS rounds (
-        id TEXT PRIMARY KEY, state_json TEXT NOT NULL
-      );
-    `)
-    // Upgrade existing databases without deleting questions or results.
-    const columns = db.prepare('PRAGMA table_info(questions)').all().map(row => row.name)
-    if (!columns.includes('explanation')) db.exec("ALTER TABLE questions ADD COLUMN explanation TEXT NOT NULL DEFAULT ''")
-    if (!columns.includes('difficulty')) db.exec("ALTER TABLE questions ADD COLUMN difficulty TEXT NOT NULL DEFAULT 'mittel'")
-
-    const seed = JSON.parse(readFileSync(new URL('./seed-quizzes.json', import.meta.url), 'utf8').replace(/^\uFEFF/, ''))
-    const insertQuiz = db.prepare('INSERT INTO quizzes VALUES (?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING')
-    const insertQuestion = db.prepare(`INSERT INTO questions
-      (id, quiz_id, category, question, answers_json, correct_index, position, explanation, difficulty)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING`)
-    const enrich = db.prepare("UPDATE questions SET explanation = ?, difficulty = ? WHERE id = ? AND explanation = ''")
-    db.exec('BEGIN')
+    await pool.query(`CREATE TABLE IF NOT EXISTS quizzes(
+      id VARCHAR(100) PRIMARY KEY, title VARCHAR(255) NOT NULL, category VARCHAR(100) NOT NULL,
+      description TEXT NOT NULL, position INT NOT NULL
+    ) ENGINE=InnoDB`)
+    await pool.query(`CREATE TABLE IF NOT EXISTS questions(
+      id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,quiz_id VARCHAR(100) NOT NULL,
+      category VARCHAR(100) NOT NULL,question TEXT NOT NULL,answers_json JSON NOT NULL,
+      correct_index INT NOT NULL,position INT NOT NULL,explanation TEXT NOT NULL,
+      difficulty VARCHAR(10) NOT NULL DEFAULT 'mittel',
+      FOREIGN KEY(quiz_id) REFERENCES quizzes(id) ON DELETE CASCADE,
+      INDEX questions_quiz_id(quiz_id)
+    ) ENGINE=InnoDB AUTO_INCREMENT=100000`)
+    await pool.query('CREATE TABLE IF NOT EXISTS rounds(id CHAR(36) PRIMARY KEY,state_json JSON NOT NULL) ENGINE=InnoDB')
+    const seed=JSON.parse(readFileSync(new URL('./seed-quizzes.json',import.meta.url),'utf8').replace(/^\uFEFF/,''))
+    const db=await pool.getConnection()
     try {
-      seed.forEach((quiz, position) => {
-        insertQuiz.run(quiz.id, quiz.title, quiz.category, quiz.description, position)
-        quiz.questions.forEach((question, index) => {
-          insertQuestion.run(question.id, quiz.id, question.category, question.question,
-            JSON.stringify(question.answers), question.correctIndex, index,
-            question.explanation, question.difficulty)
-          enrich.run(question.explanation, question.difficulty, question.id)
-        })
-      })
-      db.exec('COMMIT')
-    } catch (error) {
-      db.exec('ROLLBACK')
-      throw error
+      await db.beginTransaction()
+      // Existing MySQL edits win over seed imports.
+      for(const [position,quiz] of seed.entries()) {
+          await db.execute('INSERT INTO quizzes(id,title,category,description,position) VALUES(?,?,?,?,?) ON DUPLICATE KEY UPDATE id=id',
+            [quiz.id,quiz.title,quiz.category,quiz.description,position])
+          for(const [index,q] of quiz.questions.entries()) {
+            await db.execute(`INSERT INTO questions(id,quiz_id,category,question,answers_json,correct_index,position,explanation,difficulty)
+              VALUES(?,?,?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE id=id`,
+              [q.id,quiz.id,q.category,q.question,JSON.stringify(q.answers),q.correctIndex,index,q.explanation||'',q.difficulty||'mittel'])
+            if(q.explanation) await db.execute("UPDATE questions SET explanation=?,difficulty=? WHERE id=? AND explanation=''",
+              [q.explanation,q.difficulty||'mittel',q.id])
+          }
+      }
+      await db.commit()
+    } catch(error) { await db.rollback(); throw error }
+    finally { db.release() }
+    return {
+      pool,
+      close:()=>pool.end(),
+      async getRound(id) {
+        const [rows]=await pool.execute('SELECT state_json FROM rounds WHERE id=?',[id])
+        return rows[0]?json(rows[0].state_json):null
+      },
+      async saveRound(round) {
+        await pool.execute('INSERT INTO rounds(id,state_json) VALUES(?,?)',[round.id,JSON.stringify(round)])
+      },
+      async updateRound(id,mutate) {
+        const connection=await pool.getConnection()
+        try {
+          await connection.beginTransaction()
+          const [rows]=await connection.execute('SELECT state_json FROM rounds WHERE id=? FOR UPDATE',[id])
+          if(!rows.length){ await connection.rollback(); return null }
+          const round=json(rows[0].state_json)
+          mutate(round)
+          await connection.execute('UPDATE rounds SET state_json=? WHERE id=?',[JSON.stringify(round),id])
+          await connection.commit()
+          return round
+        } catch(error) { await connection.rollback(); throw error }
+        finally { connection.release() }
+      }
     }
-    return db
-  } catch (error) { db.close(); throw error }
+  } catch(error) { await pool.end(); throw error }
 }
 
-// Only used inside the server and the authenticated editor.
-export function readQuizzes(db) {
-  const questions = db.prepare('SELECT * FROM questions WHERE quiz_id = ? ORDER BY position, id')
-  return db.prepare('SELECT id, title, category, description FROM quizzes ORDER BY position')
-    .all().map(quiz => ({
-      ...quiz,
-      questions: questions.all(quiz.id).map(row => ({
-        id: row.id, category: row.category, question: row.question,
-        answers: JSON.parse(row.answers_json), correctIndex: row.correct_index,
-        explanation: row.explanation, difficulty: row.difficulty
-      }))
-    }))
-}
-
-export function saveQuestion(db, input, id) {
-  if (!input || typeof input !== 'object') throw new Error('Ungültige Frage')
-  for (const [field, limit] of [['quizId',100], ['category',100], ['question',1000], ['explanation',2000]]) {
-    if (typeof input[field] !== 'string' || !input[field].trim() || input[field].length > limit) {
-      throw new Error('Bitte alle Textfelder vollständig und innerhalb der erlaubten Länge ausfüllen.')
-    }
-  }
-  if (!db.prepare('SELECT id FROM quizzes WHERE id = ?').get(input.quizId)) throw new Error('Thema nicht gefunden')
-  if (!Array.isArray(input.answers) || input.answers.length !== 4 ||
-      input.answers.some(a => typeof a !== 'string' || !a.trim() || a.length > 300) ||
-      new Set(input.answers.map(a => a.trim().toLocaleLowerCase('de'))).size !== 4) throw new Error('Vier unterschiedliche Antworten sind erforderlich.')
-  if (!Number.isInteger(input.correctIndex) || input.correctIndex < 0 || input.correctIndex > 3) throw new Error('Richtige Antwort auswählen.')
-  if (!difficulties.includes(input.difficulty)) throw new Error('Ungültiger Schwierigkeitsgrad')
-  if (id !== undefined && !db.prepare('SELECT id FROM questions WHERE id = ?').get(id)) throw new Error('Frage nicht gefunden')
-  const questionId = id ?? db.prepare('SELECT MAX(COALESCE(MAX(id), 0) + 1, 100000) AS id FROM questions').get().id
-  const position = db.prepare('SELECT COALESCE(MAX(position), -1) + 1 AS p FROM questions WHERE quiz_id = ?').get(input.quizId).p
-  db.prepare(`INSERT INTO questions (id,quiz_id,category,question,answers_json,correct_index,position,explanation,difficulty)
-    VALUES (?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET
-    quiz_id=excluded.quiz_id,category=excluded.category,question=excluded.question,answers_json=excluded.answers_json,
-    correct_index=excluded.correct_index,explanation=excluded.explanation,difficulty=excluded.difficulty`)
-    .run(questionId,input.quizId,input.category.trim(),input.question.trim(),
-      JSON.stringify(input.answers.map(a=>a.trim())),input.correctIndex,position,input.explanation.trim(),input.difficulty)
-  return questionId
+export async function readQuizzes(db) {
+  const [quizzes]=await db.pool.query('SELECT id,title,category,description FROM quizzes ORDER BY position,id')
+  const [rows]=await db.pool.query('SELECT * FROM questions ORDER BY position,id')
+  return quizzes.map(quiz=>({...quiz,questions:rows.filter(q=>q.quiz_id===quiz.id).map(q=>({
+    id:q.id,category:q.category,question:q.question,answers:json(q.answers_json),
+    correctIndex:q.correct_index,explanation:q.explanation,difficulty:q.difficulty
+  }))}))
 }
